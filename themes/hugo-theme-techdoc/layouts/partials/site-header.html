@@ -1,0 +1,14 @@
+<header>
+    <div class="header-image">
+        <img src="{{ .Site.Params.logo }}" alt="{{ .Site.Title }}">
+    </div>
+    <div class="header">
+        <div class="header-h1">
+            <h1 class="header-h1">{{ .Site.Title }}</h1>
+        </div>
+        <div class="header-description">
+            {{ with .Site.Params.description }}<p class="description">{{ . }}</p>{{end}}
+        </div>
+    </div>
+
+</header>

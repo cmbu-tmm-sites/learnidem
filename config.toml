@@ -1,0 +1,103 @@
+baseURL = "https://learnidem.github.io"
+languageCode = "en-gb"
+title = "Learn Idem"
+theme = "hugo-theme-techdoc"
+# Required to get well formatted code blocks
+pygmentsUseClasses = true
+pygmentsCodeFences = true
+disablePathToLower = true
+enableGitInfo = true
+
+[params]
+    logo = "/images/service-broker.svg"
+
+    # Source Code repository section
+    description = "Part of VMware vRealize Automation"
+    # github_repository = "https://github.com/cmbu-tmm-sites/learnservicebroker"
+
+    # Documentation repository section
+    # documentation repository (set edit link to documentation repository)
+    github_doc_repository = "https://github.com/cmbu-tmm-sites/learnidem"
+    github_doc_branch = "main"
+
+    # Analytic section
+    google_analytics_id = "G-LS1LXKQ8XC" # Your Google Analytics tracking id
+    tag_manager_container_id = "" # Your Google Tag Manager container id
+    google_site_verification = "" # Your Google Site Verification for Search Console
+
+    # Open Graph and Twitter Cards settings section
+    # Open Graph settings for each page are set on the front matter.
+    # See https://gohugo.io/templates/internal/#open-graph
+    # See https://gohugo.io/templates/internal/#twitter-cards
+    title = "Learn Idem"
+    images = ["/images/service-broker.svg"] # Open graph images are placed in `static/images`
+
+    # Theme settings section
+    # Theme color
+    # See color value reference https://developer.mozilla.org/en-US/docs/Web/CSS/color
+    custom_font_color = "#0065ab"
+    custom_background_color = "#FFFFFF"
+
+    # Documentation Menu section
+    # Menu style settings
+    menu_style = "slide-menu" # "open-menu" or "slide-menu" or "" blank is as no sidebar
+
+    # Date format
+    dateformat = "" # default "2 Jan 2006"
+    # See the format reference https://gohugo.io/functions/format/#hugo-date-and-time-templating-reference
+
+    # path name excluded from documentation menu
+    menu_exclusion = [
+        "archives",
+        "archive",
+        "blog",
+        "entry",
+        "post",
+        "posts",
+    ]
+
+    # Algolia site search section
+    # See https://www.algolia.com/doc/
+    #algolia_search_enable = false
+    #algolia_indexName = "hugo-demo-techdoc"
+    #algolia_appId = "7W4SAN4PLK"
+    #algolia_apiKey = "cbf12a63ff72d9c5dc0c10c195cf9128" # Search-Only API Key
+
+# Global menu section
+# See https://gohugo.io/content-management/menus/
+[menu]
+    [[menu.main]]
+        name = "Catalog"
+        url = "/Catalog"
+        weight = 10
+    [[menu.main]]
+        name = "Deployments"
+        url = "https://learncloudassembly.github.io/Deployments/"
+        weight = 20
+    [[menu.main]]
+        name = "Content & Policies"
+        url = "/Content-and-Policies"
+        weight = 30
+    [[menu.main]]
+        name = "Infrastructure"
+        url = "https://learncloudassembly.github.io/Infrastructure/"
+        weight = 40
+    [[menu.main]]
+        name = "Approvals"
+        url = "/Approvals"
+        weight = 50
+
+
+
+# Markup configure section
+# See https://gohugo.io/getting-started/configuration-markup/
+[markup]
+    defaultMarkdownHandler = "goldmark"
+    [markup.goldmark.renderer]
+        unsafe= true
+    [markup.tableOfContents]
+        startLevel = 2
+        endLevel = 6
+        ordered = false
+[outputs]
+    home = ["HTML", "RSS"]

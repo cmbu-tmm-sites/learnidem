@@ -1,0 +1,33 @@
+/* default link color */
+a { color: #60b515; }
+a:visited { color: #1c388e }
+
+/* hint */
+.gdoc-hint.info { background: #d1d7e8; border-color: #324b99; color: black; }
+.gdoc-hint.warning { background: #fef5dc; border-color: #e4ba48; color: black; }
+.gdoc-hint.danger { background: #fae1db; border-color: #cf5f46; color: black; }
+
+.clr-content-image-wrap {
+    display: inline-block;
+    border: 1px solid #485764;
+    border-radius: 0.125rem;
+    background-color: #ffffff;
+    color: #adbbc4;
+    margin-top: 1rem;
+    padding: 10px;
+    width: auto;
+}
+
+.header {
+    height: 80px;
+    padding: 5px;
+}
+
+.header-image {
+    float: left;
+    width: 80px;
+    height: 80px;
+}
+.header-h1 {
+    vertical-align: middle;
+}

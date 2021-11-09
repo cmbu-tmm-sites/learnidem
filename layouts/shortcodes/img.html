@@ -1,0 +1,9 @@
+{{/* get file that matches the filename as specified as src="" in shortcode */}}
+<!-- {{ $src := .Page.Resources.GetMatch (printf "*%s*" (.Get "src")) }} -->
+<div class="clr-content-image-wrap">
+<a href="{{ .Get "src" }}" data-lightbox="page-images" data-title="{{ .Get "alt" }}" >
+<img src="{{ .Get "src" }}" alt="{{ .Get "alt" }}" {{ with .Get "width"}} width="{{.}}" {{ end }} />
+</a>
+<figcaption class="clr-caption">{{(.Get "alt")}}</figcaption>
+</div>
+
