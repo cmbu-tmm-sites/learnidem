@@ -21,7 +21,7 @@ enableGitInfo = true
     github_doc_branch = "main"
 
     # Analytic section
-    google_analytics_id = "G-LS1LXKQ8XC" # Your Google Analytics tracking id
+    google_analytics_id = "G-8R0DEW1VZM" # Your Google Analytics tracking id
     tag_manager_container_id = "" # Your Google Tag Manager container id
     google_site_verification = "" # Your Google Site Verification for Search Console
 
