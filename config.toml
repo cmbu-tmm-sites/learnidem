@@ -12,7 +12,7 @@ enableGitInfo = true
     logo = "/images/idem-logo.svg"
 
     # Source Code repository section
-    description = "Part of VMware vRealize Automation"
+    description = "Powered by VMware and Salt Open Projects"
     # github_repository = "https://github.com/cmbu-tmm-sites/learnservicebroker"
 
     # Documentation repository section
