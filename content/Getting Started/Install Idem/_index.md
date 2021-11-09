@@ -19,8 +19,10 @@ UBUNTU ( 18.04 & Python 3.6.9 ):
         python3 -m venv my_idem_env
         source my_idem_env/bin/activate
 
-    - Upgrade Crypto requirements
+    - Upgrade to the latest PIP to meet the Crypto requirements
         python3 -m pip install --upgrade pip
+
+    - Install Idem ( you can also include providers, in this case the AWS Cloud Provider for Idem)
         pip3 install idem idem-aws 
 
     - Verify Version
