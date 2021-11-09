@@ -9,7 +9,7 @@ disablePathToLower = true
 enableGitInfo = true
 
 [params]
-    logo = "/images/service-broker.svg"
+    logo = "/images/idem-logo.svg"
 
     # Source Code repository section
     description = "Part of VMware vRealize Automation"
@@ -65,27 +65,27 @@ enableGitInfo = true
 
 # Global menu section
 # See https://gohugo.io/content-management/menus/
-[menu]
-    [[menu.main]]
-        name = "Catalog"
-        url = "/Catalog"
-        weight = 10
-    [[menu.main]]
-        name = "Deployments"
-        url = "https://learncloudassembly.github.io/Deployments/"
-        weight = 20
-    [[menu.main]]
-        name = "Content & Policies"
-        url = "/Content-and-Policies"
-        weight = 30
-    [[menu.main]]
-        name = "Infrastructure"
-        url = "https://learncloudassembly.github.io/Infrastructure/"
-        weight = 40
-    [[menu.main]]
-        name = "Approvals"
-        url = "/Approvals"
-        weight = 50
+#[menu]
+#    [[menu.main]]
+#        name = "Catalog"
+#        url = "/Catalog"
+#        weight = 10
+#    [[menu.main]]
+#        name = "Deployments"
+#        url = "https://learncloudassembly.github.io/Deployments/"
+#        weight = 20
+#    [[menu.main]]
+#        name = "Content & Policies"
+#        url = "/Content-and-Policies"
+#        weight = 30
+#    [[menu.main]]
+#        name = "Infrastructure"
+#        url = "https://learncloudassembly.github.io/Infrastructure/"
+#        weight = 40
+#    [[menu.main]]
+#        name = "Approvals"
+#        url = "/Approvals"
+#        weight = 50
 
 
 
