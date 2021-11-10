@@ -26,6 +26,17 @@ aws:
 {{< /tab >}}
 {{< /tabs >}}
 
+Create a `credentials.yaml` file - the `default` profile will be used unless specified in the command or state file:
+
+```yaml
+azurerm:
+   default:
+      client_id: "<Your Client ID>"
+      secret: "<Your Secret key>"
+      subscription_id: "<Your Subcription Key ID>"
+      tenant: "<Your Tenant Key ID>"
+```
+
 Encrypt the credentials file using the idem encrypt command, this creates a fernet file and outputs an encryption key:
 
 ```shell
