@@ -6,7 +6,7 @@ The Developer section provides developer resources, and overview of how to exten
 
 Learn Idem is written primarily by the Technical Marketing team for vRealize Automation, but we’d love for you to contribute! There’s an “Edit on GitHub” link on each page that will take you to the source code for that content - feel free to fork the repository and write your own - we look forward to your Pull Requests!
 
-<b><h2>What is Idem?</h2></b>
+## What is Idem?
 
 {{< img src="/idem-process.png" >}}
 
@@ -19,19 +19,19 @@ Idem is the culmination of a decade of research led by the VMware and the SaltSt
 
 This documentation and these tutorials' goals are to get you moving as fast as possible. In depth explanations are available, but please don't get too bogged down with them on day 1, we want to get you solving problems, first, get your PhD. in Idem later!
 
-<b><h2>The Big Idea</h2></b>
+## The Big Idea
 Idem presents an interface that allows you to work with a cloud - or any API driven system - as data. The maintenance of large scale cloud and api systems has mandated companies to maintain large automation codebases - Idem seeks to remove this overhead from people's lives. The Idem model allows for a cloud to be scanned and all settings to be converted into raw data in a human readable way. Then it is easy to modify and enforce the state of your cloud using Idem.
 
-<b><h3>Describe</h3></b>
+### Describe
 Idem can scan your current cloud deployments and generate all of the data needed to enforce it. The ultimate introspection into your cloud is just seconds away! Better yet, the generated data is easier to read than code, and easy to modify! You can also regenerate it at any time. The source of truth for your cloud automation is your cloud.
 
-<b><h3>Enforce</h3></b>
+### Enforce
 Take the data in your cloud description and use idem to enforce it. Sending the cloud data back into Idem allows you to use Idem’s powerful idempotent, declarative, concurrent automation engine to create, manage, port, and automate your cloud at breakneck speeds!
 
-<b><h3>Beyond the Cloud</h3></b>
+### Beyond the Cloud
 With Idem, the term “Cloud” does not just mean cloud providers like AWS, Azure, and GCP, it means all things SaaS. Idem can describe and enforce sites like GitLab.com. Anything and everything that has an API is fair game for Idem.
 
-<b><h3>This is Just the Beginning</h3></b>
+### This is Just the Beginning
 Idem is an open source, Apache Licensed project from the minds of VMware’s top engineers. The goals of Idem are significant. We are seeking to create a universal cloud automation engine that can be leveraged to drive new ways to automate far more than just cloud infrastructure. We have come together with next generation concepts to allow us to keep up with cloud and API changes faster than anything developed in the past. By taking the burden of
 
 {{< button icon="fas fa-angle-double-right" url="Getting-Started" >}}Get Started{{< /button >}}
