@@ -12,5 +12,22 @@ Learn Idem is written primarily by the Technical Marketing team for vRealize Aut
 
 {{< img src="/idem-process.png" >}}
 
+Using a cloud should not require you to write massive amounts of code
+
+Idem reduces your cloud configuration to data – for you! Instead of Infrastructure as Code, Idem delivers Infrastructure as Data. The cloud becomes simplified, easier to maintain, easier to discover, and easier to use.
+Be liberated from writing and maintaining that mountain of code!
+
+<b><h2>Describe</h2></b>
+Idem can scan your current cloud deployments and generate all of the data needed to enforce it. The ultimate introspection into your cloud is just seconds away! Better yet, the generated data is easier to read than code, and easy to modify! You can also regenerate it at any time. The source of truth for your cloud automation is your cloud.
+
+<b><h2>Enforce</h2></b>
+Take the data in your cloud description and use idem to enforce it. Sending the cloud data back into Idem allows you to use Idem’s powerful idempotent, declarative, concurrent automation engine to create, manage, port, and automate your cloud at breakneck speeds!
+
+<b><h2>Beyond the Cloud</h2></b>
+With Idem, the term “Cloud” does not just mean cloud providers like AWS, Azure, and GCP, it means all things SaaS. Idem can describe and enforce sites like GitLab.com. Anything and everything that has an API is fair game for Idem.
+
+<b><h2>This is Just the Beginning</h2></b>
+Idem is an open source, Apache Licensed project from the minds of VMware’s top engineers. The goals of Idem are significant. We are seeking to create a universal cloud automation engine that can be leveraged to drive new ways to automate far more than just cloud infrastructure. We have come together with next generation concepts to allow us to keep up with cloud and API changes faster than anything developed in the past. By taking the burden of
+
 
 Let's [Get Started](/Getting-Started/)
