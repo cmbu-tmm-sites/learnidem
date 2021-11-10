@@ -28,3 +28,5 @@ With Idem, the term “Cloud” does not just mean cloud providers like AWS, Azu
 
 <b><h3>This is Just the Beginning</h3></b>
 Idem is an open source, Apache Licensed project from the minds of VMware’s top engineers. The goals of Idem are significant. We are seeking to create a universal cloud automation engine that can be leveraged to drive new ways to automate far more than just cloud infrastructure. We have come together with next generation concepts to allow us to keep up with cloud and API changes faster than anything developed in the past. By taking the burden of
+
+{{% button href="https://github.com/cmbu-tmm-sites/learnidem/blob/main/content/Getting%20Started/_index.md" %}}Get Idem{{% /button %}}
