@@ -1,4 +1,4 @@
-Welcome to Learn Idem! This site is designed as a living technical reference focussed on providing in-depth information for the Idem user and developer - whether you’re new to Idem or an experienced Idem developer.
+<b><h1>Liberating You From The Cloud</h1></b>
 
 The Getting Started section provides some basic tutorials to help you on your way to learning Idem.
 
