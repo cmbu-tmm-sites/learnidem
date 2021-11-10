@@ -34,7 +34,7 @@ idem encrypt /path/to/credentials.yaml
 
 To use the encrypted credentials file, export the encryption key and path to the fernet file as an environment variable:
 ```shell
-export ACCT_KEY=gBklLTlVxiGT1gtliGNldMThiuEA5Rxlwon6g5aJhlg=
+export ACCT_KEY=<encryption key>
 export ACCT_FILE=/path/to/credentials.yaml.fernet
 ```
 Idem retrieves the credentials from these variables while executing states. These values can also be passed as `--acct-key` and `--acct-file` options while applying the states.
