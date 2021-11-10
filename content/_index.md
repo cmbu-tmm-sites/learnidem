@@ -8,7 +8,7 @@ Learn Idem is written primarily by the Technical Marketing team for vRealize Aut
 
 ## What is Idem?
 
-{{< img src="/idem-process.png" >}}
+![The Idem Process](/idem-process.png "Idem Process")
 
 Using a cloud should not require you to write massive amounts of code
 
