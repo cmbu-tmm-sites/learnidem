@@ -37,6 +37,6 @@ To use the encrypted credentials file, export the encryption key and path to the
 export ACCT_KEY=gBklLTlVxiGT1gtliGNldMThiuEA5Rxlwon6g5aJhlg=
 export ACCT_FILE=/path/to/credentials.yaml.fernet
 ```
-Idem retrieves the credentials from these variables while executing states. These values can also be passed as acct-key and acct-file options while applying the states.
+Idem retrieves the credentials from these variables while executing states. These values can also be passed as `--acct-key` and `--acct-file` options while applying the states.
 
 Credentials can be grouped using Profiles and you can define multiple profiles in same file (e.g. default, dev, staging, etc).
