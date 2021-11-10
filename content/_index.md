@@ -10,4 +10,4 @@ Learn Idem is written primarily by the Technical Marketing team for vRealize Aut
 
 # What is Idem?
 
-{{< img src="/idem-process.png" alt="Idem Process" >}}
+{{< img src="/idem-process.png" >}}
