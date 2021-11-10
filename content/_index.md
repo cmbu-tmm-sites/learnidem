@@ -1,6 +1,4 @@
----
 <b><h1>Liberate the Cloud With Idem</b></h1>
----
 
 Welcome to Learn Idem! This site is designed as a living technical reference focussed on providing in-depth information for the Idem user and developer - whether you’re new to Idem or an experienced Idem developer.
 
