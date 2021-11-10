@@ -1,4 +1,4 @@
-<b><h1>Liberating You From The Cloud</h1></b>
+# Liberating You From The Cloud
 
 The Getting Started section provides some basic tutorials to help you on your way to learning Idem.
 
@@ -6,7 +6,7 @@ The Developer section provides developer resources, and overview of how to exten
 
 Learn Idem is written primarily by the Technical Marketing team for vRealize Automation, but we’d love for you to contribute! There’s an “Edit on GitHub” link on each page that will take you to the source code for that content - feel free to fork the repository and write your own - we look forward to your Pull Requests!
 
-# What is Idem?
+<b><h2>What is Idem?</h2></b>
 
 {{< img src="/idem-process.png" >}}
 
