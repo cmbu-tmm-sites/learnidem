@@ -31,6 +31,7 @@ Encrypt the credentials file using the idem encrypt command, this creates a fern
 ```shell
 idem encrypt /path/to/credentials.yaml
 ```
+Please note that the output string from that command is your `ACCT_KEY`
 
 To use the encrypted credentials file, export the encryption key and path to the fernet file as an environment variable:
 ```shell
