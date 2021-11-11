@@ -33,4 +33,4 @@ For Installing "idem-azure-auto" Cloud Provider:
 {{< /tab >}}
 {{< /tabs >}}
 
-
+Now you need to set up the credentials for your Idem Cloud Providers for [authentication](/Getting-Started/Authenticate/)
