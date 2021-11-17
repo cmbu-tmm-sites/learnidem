@@ -15,7 +15,7 @@ my-azure-resource-group:
   - parameters:
     location: <Azure Region>
 ```
-The <b>State SLS</b> file can be executed with:
+The <b>State SLS</b> file can be executed with: 
 
 ```shell
 idem state my_resource_group_state.sls
