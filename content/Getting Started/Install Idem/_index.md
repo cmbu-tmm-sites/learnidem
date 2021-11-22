@@ -46,4 +46,5 @@ idem --version
 ```
 {{< /tab >}}
 {{< /tabs >}}
-At this point you need to set up the credentials to [authenticate](/Getting-Started/Authenticate/)
+
+At this point you can install [Cloud Providers](/Getting-Started/Install-Idem/Cloud-Providers/) then set up the credentials to [authenticate](/Getting-Started/Authenticate/) with the Idem Cloud Providers.
