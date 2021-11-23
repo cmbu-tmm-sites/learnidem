@@ -3,18 +3,21 @@ title: "Getting Started"
 weight: 20
 ---
 
-Idem is an idempotent dataflow programming language. It exposes stateful programming constructs that makes things like enforcing the state of an application, configuration, SaaS system, or others very simple.
+Welcome to "Getting Started" with Idem. Idem is an idempotent dataflow programming language. It exposes stateful programming constructs that makes things like enforcing the state of your cloud resources, an application, configuration, or anything really....very simple.
 
-Idem State and Exec modules
-In Idem we enforce the desired state using State and exec modules.
+Idem is super simple to learn and even easier to get started. In this section we are going to guide you through the steps to get you managing you cloud environments. It's an easy three step process:
 
-Idem state modules generally have three functions :
+### 1. [Install Idem](Getting-Started/Install-Idem)
+idem can work on any operating system. It's available from [source](https://gitlab.com/saltstack/pop/idem) or through a package manager. (Make it easy on yourself..use the package manager route)
 
-<b>describe:</b> This function is is used to describe the current state of the environment. For e.g. We can run describe on a AWS idem module to describe all the VPCs in a region. 
+### 2. [Select a Cloud Provider](Getting-Started/Cloud-Providers)
+Now it's time to pick a could to manage. These examples will focus in on AWS and Azure but other clouds are available by checking out the [Idem Docs](https://idemproject.io/docs). Add one and let's get going!!
 
-<b>present:</b> This function is used to achieve the desired state by creating or updating components in environment. The desired state is represented in SLS file. For e.g we can define the VPCs to be created in a region in SLS file and apply it.
+### 3. [Authenticating with Idem](/Getting-Started/Authenticate)
+It's super easy to manage multiple clouds and authenticate to then with Idem. You can even have multiple credentials for the same cloud and switch between them. It's just easy.
 
-<b>absent:</b> This function is used to achieve desired state by deleting the components from environment. This desired state is also represented in SLS file. For e.g. we can specify that a VPC with certain configuration should never exist in a region and apply it.
+### [Understanding Idem Basic Commands](/Getting-Started/Basic-Commands)
+There are some basic commands that are used often with Idem. In this section you will get to know these commands before tackling your first cloud.
 
 Idem is based on the concept of [Plugin Oriented Programming](https://pop.readthedocs.io/en/latest/)
 More documentation [readthedocs](https://idem.readthedocs.io/en/latest/)
