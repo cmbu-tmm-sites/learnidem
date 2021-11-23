@@ -19,5 +19,6 @@ It's super easy to manage multiple clouds and authenticate to then with Idem. Yo
 ### [Understanding Idem Basic Commands](/Getting-Started/Basic-Commands)
 There are some basic commands that are used often with Idem. In this section you will get to know these commands before tackling your first cloud.
 
-Idem is based on the concept of [Plugin Oriented Programming](https://pop.readthedocs.io/en/latest/)
+#### Other Resources
+Idem is based on the concept of [Plugin Oriented Programming](https://pop.readthedocs.io/en/latest/)</br>
 More documentation [readthedocs](https://idem.readthedocs.io/en/latest/)
