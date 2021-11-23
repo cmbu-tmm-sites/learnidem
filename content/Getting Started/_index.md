@@ -10,7 +10,7 @@ Idem is super simple to learn and even easier to get started. In this section we
 ### 1. [Install Idem](/Getting-Started/Install-Idem)
 idem can work on any operating system. It's available from [source](https://gitlab.com/saltstack/pop/idem) or through a package manager. (Make it easy on yourself..use the package manager route)
 
-### 2. [Select a Cloud Provider](/Getting-Started/Cloud-Providers)
+### 2. [Select a Cloud Provider](/Getting-Started/Install-Idem/Cloud-Providers/)
 Now it's time to pick a could to manage. These examples will focus in on AWS and Azure but other clouds are available by checking out the [Idem Docs](https://idemproject.io/docs). Add one and let's get going!!
 
 ### 3. [Authenticating with Idem](/Getting-Started/Authenticate)
