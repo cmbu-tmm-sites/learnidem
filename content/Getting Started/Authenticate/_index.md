@@ -21,7 +21,7 @@ aws:
     region_name: <AWS Region>
 ```
 {{< /tab >}}
-{{< tab "idem-azure" >}}
+{{< tab "idem-azure-auto" >}}
 
 Create a `credentials.yaml` file - the `default` profile will be used unless specified in the command or state file:
 
