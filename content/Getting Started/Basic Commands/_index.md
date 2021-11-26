@@ -1,6 +1,6 @@
 ---
 title: "Basic Commands"
-weight: 30
+weight: 40
 ---
 
 <SPAN STYLE="font-size:18.0pt">STATES</SPAN><br>

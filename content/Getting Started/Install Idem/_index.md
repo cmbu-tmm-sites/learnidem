@@ -45,6 +45,21 @@ pip3 install idem idem-aws
 idem --version
 ```
 {{< /tab >}}
+
+{{< tab "Windows" >}}
+
+Download and install [Windows for Python](https://www.python.org/downloads/windows/), making sure the python and pip executables are included in the PATH.
+
+```shell
+# Upgrade to the latest PIP to meet the Crypto requirements
+python3 -m pip install --upgrade pip
+# Install Idem ( you can also include providers, in this case the AWS Cloud Provider for Idem)
+pip3 install idem idem-aws 
+# Verify Version
+idem --version
+```
+{{< /tab >}}
+
 {{< /tabs >}}
 
 At this point you can install [Cloud Providers](/Getting-Started/Install-Idem/Cloud-Providers/) then set up the credentials to [authenticate](/Getting-Started/Authenticate/) with the Idem Cloud Providers.
