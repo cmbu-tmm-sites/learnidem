@@ -4,6 +4,9 @@ weight: 40
 ---
 
 {{< tabs "usecases" >}}
+{{< tab "Describe Azure Resources" >}}
+Content to walk through describing Azure resources and auto create state files for resource
+{{< /tab >}}
 {{< tab "Create Azure Resources" >}}
 States can be accessed by their relative location in idem-azure-auto/idem_azure_auto/states.
 For example, in the <b>State SLS</b> yaml file below, Azure resource group state can be created with the [Present](/Getting-Started/Basic-Commands/) function :
