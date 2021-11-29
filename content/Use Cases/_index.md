@@ -52,7 +52,7 @@ The resource parameters in an SLS yaml file follow the exact structure as whatâ€
  Create AWS resources from state files and modify created resource
  {{< /tab >}}
  {{< tab "Create your first plugin" >}}
- Create a API and create a plugin for an API automatically
+ Read an API and create a plugin from the API automatically
  {{< /tab >}}
 
  {{< /tabs >}}
