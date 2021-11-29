@@ -3,7 +3,9 @@ title: "Use Cases"
 weight: 40
 ---
 
-States can be accessed by their relative location in idem-azure-auto/idem_azure_auto/states. 
+{{< tabs "usecases" >}}
+{{< tab "Create Azure Resources" >}}
+States can be accessed by their relative location in idem-azure-auto/idem_azure_auto/states.
 For example, in the <b>State SLS</b> yaml file below, Azure resource group state can be created with the [Present](/Getting-Started/Basic-Commands/) function :
 
 <i>my_resource_group_state.sls:</i>
@@ -15,7 +17,7 @@ my-azure-resource-group:
   - parameters:
     location: <Azure Region>
 ```
-The <b>State SLS</b> file can be executed with: 
+The <b>State SLS</b> file can be executed with:
 
 ```shell
 idem state my_resource_group_state.sls
@@ -39,3 +41,6 @@ The resource parameters in an SLS yaml file follow the exact structure as what�
 <b>URI Parameters</b> should be specified in snake case with “-” in front. All parameters of the API <b>request body</b> should be specified in exactly the same way as what’s in the [Azure REST API doc](https://docs.microsoft.com/en-us/rest/api/azure/).
 
  You can include multiple resources in a single SLS yaml file.
+ {{< /tab >}}
+
+ {{< /tabs >}}
