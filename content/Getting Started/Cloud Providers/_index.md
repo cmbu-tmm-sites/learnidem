@@ -37,11 +37,16 @@ pip3 list | grep idem-azure-auto
 
 <SPAN STYLE="font-size:18.0pt">Current Supported Resources states in "idem-azure-auto"</SPAN>
  <ul>
-<li><p><b>Compute Service:</b></p>
+ <li><p><b>authorization:</b></p>
+     role_assignment</br>
+     role_definition</li>
+<li><p><b>compute:</b></p>
     virtual_machines</li>
-<li><p><b>Resource Management:</b></p>
+<li><p><b>resource_management:</b></p>
     resource_groups</li>
-<li><p><b>Virtual networks Service:</b></p>
+<li><p><b>storage_resource_provider:</b></p>
+    storage_accounts</li>    
+<li><p><b>virtual_networks_service:</b></p>
     network_interfaces<br>
     network_security_groups<br>
     public_ip_addresses<br>
