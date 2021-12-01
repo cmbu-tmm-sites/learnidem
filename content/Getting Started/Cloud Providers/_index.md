@@ -53,7 +53,7 @@ pip3 list | grep idem-azure-auto
     resource_groups</li>
 <li><p><b>storage_resource_provider:</b></p>
     storage_accounts</li>    
-<li><p><b>virtual_networks_service:</b></p>
+<li><p><b>virtual_networks:</b></p>
     nat_gateways<br>
     network_interfaces<br>
     network_security_groups<br>
