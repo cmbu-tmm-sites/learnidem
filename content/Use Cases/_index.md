@@ -45,12 +45,6 @@ The resource parameters in an SLS yaml file follow the exact structure as whatâ€
 
  You can include multiple resources in a single SLS yaml file.
  {{< /tab >}}
- {{< tab "Describe AWS Resources" >}}
- Content to walk through describing AWS resources and auto create state files for resource
- {{< /tab >}}
- {{< tab "Create AWS Resources" >}}
- Create AWS resources from state files and modify created resource
- {{< /tab >}}
  {{< tab "Create your first plugin" >}}
  Read an API and create a plugin from the API automatically
  {{< /tab >}}
