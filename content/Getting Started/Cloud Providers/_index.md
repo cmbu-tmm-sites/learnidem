@@ -6,7 +6,7 @@ weight: 20
 For Installing Cloud Providers you can use "pip" tool :
 
 {{< tabs "install" >}}
-{{< tab "idem-aws" >}}
+<!--  tab "idem-aws" 
 
 For Installing "idem-aws" Cloud Provider
 
@@ -20,7 +20,7 @@ You can verify installation with "pip"
 pip3 list | grep idem-aws
 ```
 
-{{< /tab >}}
+ /tab  -->
 {{< tab "idem-azure-auto" >}}
 
 For Installing the latest "idem-azure-auto" Cloud Provider

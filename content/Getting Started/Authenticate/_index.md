@@ -9,7 +9,7 @@ To perform the idem operations, we would require credentials of the environment 
 Idem suggests the following steps for passing credentials:
 
 {{< tabs "install" >}}
-{{< tab "idem-aws" >}}
+<!--  tab "idem-aws"
 
 Create a `credentials.yaml` file - the `default` profile will be used unless specified in the command or state file:
 
@@ -20,7 +20,7 @@ aws:
     aws_secret_access_key: <Your Secret Access Key>
     region_name: <AWS Region>
 ```
-{{< /tab >}}
+ /tab  -->
 {{< tab "idem-azure-auto" >}}
 
 Create a `credentials.yaml` file - the `default` profile will be used unless specified in the command or state file:
