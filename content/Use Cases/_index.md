@@ -5,7 +5,28 @@ weight: 40
 
 {{< tabs "usecases" >}}
 {{< tab "Describe Azure Resources" >}}
-Content to walk through describing Azure resources and auto create state files for resource
+You can lists all the current Azure resources of the same resource type under the subscription id specified in the credential profile.
+
+We will use [describe](/Getting-Started/Basic-Commands/) directive and the specific Azure Resource 
+
+```shell
+idem describe azure.[ supported Azure State].[Azure Resource] 
+```
+
+Example, if we want to list existing VMs
+
+```shell
+idem describe azure.compute.virtual_machines
+```
+
+or
+
+if we want to list existing Virtual Networks
+
+```shell
+idem describe azure.virtual_networks.virtual_networks
+```
+
 {{< /tab >}}
 {{< tab "Create Azure Resources" >}}
 States can be accessed by their relative location in idem-azure-auto/idem_azure_auto/states.
