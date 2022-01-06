@@ -3,4 +3,4 @@ title: "Developer Resources"
 weight: 50
 ---
 
-[ Insert Content Here]
+Link to Main Idem Project Page
