@@ -9,7 +9,7 @@ disablePathToLower = true
 enableGitInfo = true
 
 [params]
-    logo = "/images/idem-logo.svg"
+    logo = "/images/idem-logo.jpg"
 
     # Source Code repository section
     description = "Powered by Salt Open Projects"
