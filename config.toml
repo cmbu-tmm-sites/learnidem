@@ -1,6 +1,6 @@
 baseURL = "https://learnidem.github.io"
 languageCode = "en-gb"
-title = "Learn Idem"
+title = "   Learn Idem"
 theme = "hugo-theme-techdoc"
 # Required to get well formatted code blocks
 pygmentsUseClasses = true
@@ -12,7 +12,7 @@ enableGitInfo = true
     logo = "/images/idem-logo.jpg"
 
     # Source Code repository section
-    description = "Powered by Salt Open Projects"
+    description = "   Powered by Salt Open Projects"
     # github_repository = "https://github.com/cmbu-tmm-sites/learnservicebroker"
 
     # Documentation repository section
