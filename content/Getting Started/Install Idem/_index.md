@@ -21,8 +21,8 @@ virtualenv 3.9.0 salt-idem
 pyenv local salt-idem
 # Update Python package manager
 python -m pip install --upgrade pip
-# Install Idem (you can also include providers, in this case the AWS Cloud Provider for Idem)
-pip install idem idem-aws
+# Install Idem 
+pip install idem 
 ```
 {{< /tab >}}
 {{< tab "Ubuntu" >}}
@@ -39,8 +39,8 @@ python3 -m venv my_idem_env
 source my_idem_env/bin/activate
 # Upgrade to the latest PIP to meet the Crypto requirements
 python3 -m pip install --upgrade pip
-# Install Idem ( you can also include providers, in this case the AWS Cloud Provider for Idem)
-pip3 install idem idem-aws 
+# Install Idem 
+pip3 install idem 
 # Verify Version
 idem --version
 ```
@@ -53,8 +53,8 @@ Download and install [Windows for Python](https://www.python.org/downloads/windo
 ```shell
 # Upgrade to the latest PIP to meet the Crypto requirements
 python3 -m pip install --upgrade pip
-# Install Idem ( you can also include providers, in this case the AWS Cloud Provider for Idem)
-pip3 install idem idem-aws 
+# Install Idem 
+pip3 install idem 
 # Verify Version
 idem --version
 ```
