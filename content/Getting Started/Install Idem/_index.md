@@ -62,4 +62,10 @@ idem --version
 
 {{< /tabs >}}
 
+<p>Idem installation - Ubuntu</p>
+<script id="asciicast-ZlpSV4Dd1vMneJ8j8GRwo1a4R" src="https://asciinema.org/a/ZlpSV4Dd1vMneJ8j8GRwo1a4R.js" async data-autoplay="true" data-size="small" loop="true"></script>
+
+
 At this point you can install [Cloud Providers](/Getting-Started/Install-Idem/Cloud-Providers/) then set up the credentials to [authenticate](/Getting-Started/Authenticate/) with the Idem Cloud Providers.
+
+
