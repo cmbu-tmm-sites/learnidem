@@ -3,30 +3,14 @@ title: "Install Idem"
 weight: 10
 ---
 
-Idem can be installed in different ways in multiple Operating System and container
+Idem can be installed in different ways in multiple Operating System and Containers<br>
+[Python 3.6+](https://www.python.org/downloads/) is required as prerequisite.
 
 
 {{< tabs "install" >}}
-{{< tab "MacOS" >}} 
 
-Installation instructions for MacOS using [Homebrew](https://brew.sh/):
-```shell
-# Install pyenv and pyenv-virtualenv
-brew install pyenv pyenv-virtualenv
-# Install Python 3.9.0
-pyenv install 3.9.0
-# Create a virtualenv called "salt-idem" using Python 3.9.0
-virtualenv 3.9.0 salt-idem
-# Activate the virtualenv
-pyenv local salt-idem
-# Update Python package manager
-python -m pip install --upgrade pip
-# Install Idem 
-pip install idem 
-```
-{{< /tab >}}
 {{< tab "Ubuntu" >}}
-Ubuntu 18.04 & Python 3.6.9:
+Ubuntu 18.04 & [Python 3.6.9](https://www.python.org/downloads/release/python-369/):
 
 ```shell
 # Install Base Packages
@@ -44,6 +28,29 @@ pip3 install idem
 # Verify Version
 idem --version
 ```
+<p>Idem installation - Ubuntu</p>
+<script id="asciicast-ZlpSV4Dd1vMneJ8j8GRwo1a4R" src="https://asciinema.org/a/ZlpSV4Dd1vMneJ8j8GRwo1a4R.js" async theme="asciinema" data-autoplay="true" data-size="small" loop="true"></script>
+
+{{< /tab >}}
+
+{{< tab "MacOS" >}} 
+
+Installation instructions for MacOS using [Homebrew](https://brew.sh/):
+```shell
+# Install pyenv and pyenv-virtualenv
+brew install pyenv pyenv-virtualenv
+# Install Python 3.9.0
+pyenv install 3.9.0
+# Create a virtualenv called "salt-idem" using Python 3.9.0
+virtualenv 3.9.0 salt-idem
+# Activate the virtualenv
+pyenv local salt-idem
+# Update Python package manager
+python -m pip install --upgrade pip
+# Install Idem 
+pip install idem 
+```
+
 {{< /tab >}}
 
 {{< tab "Windows" >}}
@@ -62,10 +69,6 @@ idem --version
 
 {{< /tabs >}}
 
-<p>Idem installation - Ubuntu</p>
-<script id="asciicast-ZlpSV4Dd1vMneJ8j8GRwo1a4R" src="https://asciinema.org/a/ZlpSV4Dd1vMneJ8j8GRwo1a4R.js" async data-autoplay="true" data-size="small" loop="true"></script>
-
-
-At this point you can install [Cloud Providers](/Getting-Started/Install-Idem/Cloud-Providers/) then set up the credentials to [authenticate](/Getting-Started/Authenticate/) with the Idem Cloud Providers.
+At this point you can install [Cloud Providers](/Getting-Started/Cloud-Providers/) then set up the credentials to [authenticate](/Getting-Started/Authenticate/) with the Idem Cloud Providers.
 
 

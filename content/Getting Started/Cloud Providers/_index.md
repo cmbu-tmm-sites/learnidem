@@ -3,7 +3,7 @@ title: "Cloud Providers"
 weight: 20
 ---
 
-For Installing Cloud Providers you can use "pip" tool :
+For Installing Cloud Providers you can use Python Package Installer [pip](https://pypi.org/project/pip/)" tool :
 
 {{< tabs "install" >}}
 <!--  tab "idem-aws" 
@@ -23,6 +23,7 @@ pip3 list | grep idem-aws
  /tab  -->
 {{< tab "idem-azure-auto" >}}
 
+
 For Installing the latest "idem-azure-auto" Cloud Provider
 
 ```shell
@@ -34,12 +35,18 @@ or you can install / upgrade to an specific release
 ```shell
 pip install idem-azure-auto==0.0.2
 ```
-Please note that the provider may have version dependencies, such as "idem-aiohttp" & "idem" itself but the "pip" install will update them as well.
+Please note that the provider may have version dependencies, such as "idem-aiohttp" & [idem](Getting-Started/Install-Idem/) itself but the [pip](https://pypi.org/project/pip/) install will update them as well.
 
-You can verify installation with "pip"
+You can verify installation with [pip](https://pypi.org/project/pip/)
 
 ```shell
 pip3 list | grep idem-azure-auto
+```
+
+And obtain more details, including version and required dependencies
+
+```shell
+pip3 show idem-azure-auto
 ```
 
 <SPAN STYLE="font-size:18.0pt">Current Supported Resources states in "idem-azure-auto"</SPAN>
