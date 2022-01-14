@@ -78,3 +78,4 @@ Then you can reference those account profiles with the option `--acct-profile`
 ```shell
 idem describe azure.compute.virtual_machines --acct-profile tmm
 ```
+<script id="asciicast-SiXcq1OmVkca57LNf2m6N4wWK" src="https://asciinema.org/a/SiXcq1OmVkca57LNf2m6N4wWK.js" async theme="asciinema" data-autoplay="true" data-size="small" loop="true"></script>
