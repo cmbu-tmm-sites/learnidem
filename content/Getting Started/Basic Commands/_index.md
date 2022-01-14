@@ -22,7 +22,7 @@ For Idem, you have the [idem cli](/Getting-Started/Install-Idem/) with the follo
     Commands to run idempotent states, e.g. create, update, and in general manage your resources </li>
 </ul>
 
-You will use mostly a combination of <b>describe</b> (Discover status and helper for crafting a state file to update resource) and <b>state</b> commands (for managing the resources states), let's take a closer look to <b>state</b> operations.
+You will use mostly a combination of <b>describe</b> (Discover status and helper for crafting a state file to update resource) and <b>state</b> commands (for managing the resources states), <br> let's take a closer look to <b>state</b> operations.
 
 <SPAN STYLE="font-size:18.0pt">STATES</SPAN><br>
 Idem states are used to make sure resources are in a desired state. The desired state of a resource can be specified in sls file. 
