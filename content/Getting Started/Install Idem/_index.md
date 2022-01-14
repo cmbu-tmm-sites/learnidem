@@ -28,7 +28,7 @@ pip3 install idem
 # Verify Version
 idem --version
 ```
-<p>Idem installation - Ubuntu</p>
+<p><b>Idem installation - Ubuntu</b></p>
 <script id="asciicast-ZlpSV4Dd1vMneJ8j8GRwo1a4R" src="https://asciinema.org/a/ZlpSV4Dd1vMneJ8j8GRwo1a4R.js" async theme="asciinema" data-autoplay="true" data-size="small" loop="true"></script>
 
 {{< /tab >}}

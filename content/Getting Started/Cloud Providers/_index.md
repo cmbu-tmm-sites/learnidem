@@ -27,27 +27,30 @@ pip3 list | grep idem-aws
 For Installing the latest "idem-azure-auto" Cloud Provider
 
 ```shell
-pip3 install idem-azure-auto
+pip install idem-azure-auto
 ```
 
 or you can install / upgrade to an specific release
 
 ```shell
-pip install idem-azure-auto==0.0.2
+pip install idem-azure-auto==0.0.3
 ```
 Please note that the provider may have version dependencies, such as "idem-aiohttp" & [idem](Getting-Started/Install-Idem/) itself but the [pip](https://pypi.org/project/pip/) install will update them as well.
 
 You can verify installation with [pip](https://pypi.org/project/pip/)
 
 ```shell
-pip3 list | grep idem-azure-auto
+pip list | grep idem-azure-auto
 ```
 
 And obtain more details, including version and required dependencies
 
 ```shell
-pip3 show idem-azure-auto
+pip show idem-azure-auto
 ```
+<p><b>Idem Azure Provider Install - Ubuntu</b></p>
+<script id="asciicast-nVpeQTcSDh36o4UwfFp1tHrnM" src="https://asciinema.org/a/nVpeQTcSDh36o4UwfFp1tHrnM.js" async theme="asciinema" data-autoplay="true" data-size="small" loop="true"></script>
+
 
 <SPAN STYLE="font-size:18.0pt">Current Supported Resources states in "idem-azure-auto"</SPAN>
  <ul>
@@ -75,6 +78,5 @@ pip3 show idem-azure-auto
 {{< /tab >}}
 {{< /tabs >}}
 
-Now you need to set up the credentials for your Idem Cloud Providers for [authentication](/Getting-Started/Authenticate/)
-
-[You can find use case examples here](/Use-Cases/)
+Now you need to set up the credentials for your Idem Cloud Providers for [authentication](/Getting-Started/Authenticate/)<br>
+Then you could follow a few [use case examples ](/Use-Cases/)
