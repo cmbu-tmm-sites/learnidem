@@ -63,6 +63,8 @@ pip show idem-azure-auto
     resource_groups</li>
 <li><p><b>storage_resource_provider:</b></p>
     storage_accounts</li>    
+<li><p><b>policy:</b></p>
+    policy_assignments</li>    
 <li><p><b>virtual_networks:</b></p>
     nat_gateways<br>
     network_interfaces<br>
