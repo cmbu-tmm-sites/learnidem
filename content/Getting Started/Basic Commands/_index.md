@@ -5,22 +5,21 @@ weight: 40
 
 For Idem, you have the [idem cli](/Getting-Started/Install-Idem/) with the following Basic Commands:
 
- <ul>
-<li><p><b>encrypt</b></p>
-     Use the acct subsystem to encrypt data, e.g. Encrypt the credentials file</li>
+<b>encrypt</b><br>
+     Use the acct subsystem to encrypt data, e.g. [Encrypt the credentials file](/Getting-Started/Authenticate/)
 
-<li><p><b>decrypt</b></p>
-     Use the acct subsystem to decrypt data</li>
+<b>decrypt</b><br>
+     Use the acct subsystem to decrypt data
 
-<li><p><b>describe</b></p>
-    Commands to run description routines, e.g.Listing existing VMs details</li>
+<b>describe</b><br>
+    Commands to run description routines, e.g. [Listing existing VMs details](/Use-Cases/Describe/)
 
-<li><p><b>exec</b></p>
-    Commands to run execution routines, normally used internally in idem code</li>
+<b>exec</b><br>
+    Commands to run execution routines, normally used internally in idem code
 
-<li><p><b>state</b></p>
-    Commands to run idempotent states, e.g. create, update, and in general manage your resources </li>
-</ul>
+<b>state</b><br>
+    Commands to run idempotent states, e.g. [create, update, and in general manage your resources](/Use-Cases/SLS-States/) 
+
 
 You will use mostly a combination of <b>describe</b> (Discover status and helper for crafting a state file to update resource) and <b>state</b> commands (for managing the resources states), <br> let's take a closer look to <b>state</b> operations.
 

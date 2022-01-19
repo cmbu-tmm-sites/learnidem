@@ -1,17 +1,20 @@
 ---
-title: "Use Cases"
-weight: 40
+title: "SLS States"
+weight: 15
 ---
 
+States are yaml file definitions with extension <b>SLS</b> <br>
+States can be accessed by their relative location in idem-azure-auto/idem_azure_auto/states.<br>
+For example, in the <b>State SLS</b> yaml file below, Azure resource group state can be created and subsequently updated with the [Present](/Getting-Started/Basic-Commands/) state function. 
+
+The following examples showcase how to use the available [idem states](/Getting-Started/Basic-Commands/) to work with Azure Resources.
 Make sure to export the encryption key and path to the fernet file as an environment variable as described in the [authentication section](/Getting-Started/Authenticate/) before trying the commands below
 
 {{< tabs "usecases" >}}
 
-{{< tab "Create Azure Resources" >}}
-States can be accessed by their relative location in idem-azure-auto/idem_azure_auto/states.
-For example, in the <b>State SLS</b> yaml file below, Azure resource group state can be created with the [Present](/Getting-Started/Basic-Commands/) function :
+{{< tab "Present" >}}
 
-<i>my_resource_group_state.sls:</i>
+Create an Azure Resource Group : <i>my_resource_group_state.sls:</i>
 
 ```yaml
 my-azure-resource-group:
@@ -44,9 +47,21 @@ The resource parameters in an SLS yaml file follow the exact structure as what�
 <b>URI Parameters</b> should be specified in snake case with “-” in front. All parameters of the API <b>request body</b> should be specified in exactly the same way as what’s in the [Azure REST API doc](https://docs.microsoft.com/en-us/rest/api/azure/).
 
  You can include multiple resources in a single SLS yaml file.
+ Some resources may have dependencies among them, for that you include [ reconciler=basic flag ](/Use-Cases/reconciler-flag/), This allows Idem-azure-auto to run Idem state
+with Idem's reconciliation loop.
+
  {{< /tab >}}
 
-{{< tab "Create Azure Virtual Machine " >}}
+  {{< tab "Present | Update" >}}
+Update an existing an Azure Resource Group : <i>my_resource_group_state.sls:</i>
+ {{< /tab >}}
+
+  {{< tab "Absent" >}}
+ Remove an existing Azure Resource Group : <i>my_resource_group_state.sls:</i>
+ {{< /tab >}}
+
+
+{{< tab "Basic End to End Azure Virtual Machine " >}}
 This example showcases how to create a basic Azure Virtual Machine, we will create the Resource Group, Re-Use an existing NIC and create the Azure Virtual Machine resource then we could update the metadata:
 
 We will use [describe](/Getting-Started/Basic-Commands/) command to verify we don't have an existing Azure VM
@@ -752,11 +767,10 @@ Function: azure.resource_management.resource_groups.absent
  Comment: 'moff-idem-01' already absent
  Changes: None
 ```
+ Some resources may have dependencies among them, for that you include [ reconciler=basic flag ](/Use-Cases/reconciler-flag/), This allows Idem-azure-auto to run Idem state
+with Idem's reconciliation loop.
 
 {{< /tab >}}
 
- {{< tab "Create your first plugin" >}}
- Read an API and create a plugin from the API automatically
- {{< /tab >}}
 
  {{< /tabs >}}
