@@ -52,7 +52,7 @@ with Idem's reconciliation loop.
 
  {{< /tab >}}
 
-  {{< tab "Present | Update" >}}
+  {{< tab "Present (Update)" >}}
 Update an existing an Azure Resource Group : <i>my_resource_group_state.sls:</i>
  {{< /tab >}}
 
