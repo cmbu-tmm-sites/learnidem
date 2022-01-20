@@ -12,6 +12,10 @@ Make sure to export the encryption key and path to the fernet file as an environ
 
 {{< tabs "usecases" >}}
 
+{{< tab "Describe 2 State" >}}
+ XXXX Section Explaining how to use describe to build states : <i>my_resource_group_state.sls:</i>
+{{< /tab >}}
+
 {{< tab "Present" >}}
 
 Create an Azure Resource Group : <i>my_resource_group_state.sls:</i>
