@@ -73,7 +73,7 @@ aws:
     region_name: <AWS Region>
 ```
 
-Then you can reference those account profiles with the option `--acct-profile`
+Then you can reference those account profiles with the option `--acct-profile` , please note that if you don't specific account profile, the default is used.
 
 ```shell
 idem describe azure.compute.virtual_machines --acct-profile tmm
