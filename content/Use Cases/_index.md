@@ -755,8 +755,4 @@ Function: azure.resource_management.resource_groups.absent
 
 {{< /tab >}}
 
- {{< tab "Create your first plugin" >}}
- Read an API and create a plugin from the API automatically
- {{< /tab >}}
-
  {{< /tabs >}}

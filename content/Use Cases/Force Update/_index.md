@@ -6,8 +6,8 @@ New Idem state feature:
 <b>force_update</b> are supported on most resources. This flag is default to "False".<br>
 If the flag is set to "True" in an SLS file, the resource will be updated via "PUT"
 operation. This will allow parameters that aren't supported in the "PATCH" operation to be updated.<br>
-However, this is also a riskier operation since "PUT" operation can wipe out some existing data of the resource, <b style="color:red;">use
-with caution.</b>
+<b style="color:black;">Use
+with caution;</b> <b style="color:red;">"PUT" operation can  wipe out some existing data or replace the whole resource</b>, e.g. it could destroy and recreate a Virtual Machine.
 
 Let's say I have already the Azure Virtual Network : vNet1-Idem 
 

@@ -9,30 +9,6 @@ Idem can be installed in different ways in multiple Operating System and Contain
 
 {{< tabs "install" >}}
 
-{{< tab "Ubuntu" >}}
-Ubuntu 18.04 & [Python 3.6.9](https://www.python.org/downloads/release/python-369/):
-
-```shell
-# Install Base Packages
-sudo apt update && sudo apt -y upgrade
-sudo apt install -y python3-pip build-essential libssl-dev libffi-dev python-dev python3-venv
-# Optional, you can create a Virtual Enviroment  
-mkdir environments
-cd environments
-python3 -m venv my_idem_env
-source my_idem_env/bin/activate
-# Upgrade to the latest PIP to meet the Crypto requirements
-python3 -m pip install --upgrade pip
-# Install Idem 
-pip3 install idem 
-# Verify Version
-idem --version
-```
-<p><b>Idem installation - Ubuntu</b></p>
-<script id="asciicast-ZlpSV4Dd1vMneJ8j8GRwo1a4R" src="https://asciinema.org/a/ZlpSV4Dd1vMneJ8j8GRwo1a4R.js" async theme="asciinema" data-autoplay="true" data-size="small" loop="true"></script>
-
-{{< /tab >}}
-
 {{< tab "MacOS" >}} 
 
 Installation instructions for MacOS using [Homebrew](https://brew.sh/):
@@ -65,6 +41,30 @@ pip3 install idem
 # Verify Version
 idem --version
 ```
+{{< /tab >}}
+
+{{< tab "Ubuntu" >}}
+Ubuntu 18.04 & [Python 3.6.9](https://www.python.org/downloads/release/python-369/):
+
+```shell
+# Install Base Packages
+sudo apt update && sudo apt -y upgrade
+sudo apt install -y python3-pip build-essential libssl-dev libffi-dev python-dev python3-venv
+# Optional, you can create a Virtual Enviroment  
+mkdir environments
+cd environments
+python3 -m venv my_idem_env
+source my_idem_env/bin/activate
+# Upgrade to the latest PIP to meet the Crypto requirements
+python3 -m pip install --upgrade pip
+# Install Idem 
+pip3 install idem 
+# Verify Version
+idem --version
+```
+<p><b>Idem installation - Ubuntu</b></p>
+<script id="asciicast-ZlpSV4Dd1vMneJ8j8GRwo1a4R" src="https://asciinema.org/a/ZlpSV4Dd1vMneJ8j8GRwo1a4R.js" async theme="asciinema" data-autoplay="true" data-size="small" loop="true"></script>
+
 {{< /tab >}}
 
 {{< /tabs >}}
