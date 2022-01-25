@@ -44,16 +44,26 @@ You will use mostly a combination of <b>describe</b> (Discover status and helper
     Commands to run execution routines, normally used internally in idem code
 {{< /tab >}}
 
-{{< tab "States" >}}
+{{< tab "States - SLS" >}}
  
- <ul>
-<li><p><b>Present State</b></p> 
-    makes sure a resource exists in a desired state. If a resource does not exist, running present will create the resource on the provider. If a resource exists, running present will update the resource on the provider. (Only the values that the Cloud Provider REST API supports can be updated.)</li>
-<li><p><b>Absent State</b></p>
-    makes sure a resource does not exist. If a resource exits, running absent will delete the resource. If a resource does not exist, running absent is a no-operation.</li>
-<li><p><b>Describe State</b></p>
-    lists all the current resources of the same resource type under the <b>subscription id</b> specified in the credential profile.</li>
- </ul>
+<b>Present State</b>
+    makes sure a <b>resource exists in a desired state</b>. If a resource does not exist, running present will create the resource on the provider. If a resource exists, running present will <b>update</b> the resource on the provider. (Only the values that the Cloud Provider REST API supports can be updated). <br>
+    You can indicate this state by adding "<<Your Provider>>.<<Your Provider Resource>><b>.present</b>"
+<br>
+```shell
+my-virtual-network:
+azure.virtual_networks.virtual_networks.present:
+```
+
+<b>Absent State</b>
+    makes sure a <b>resource does not exist</b>. If a resource exits, running absent will <b>delete</b> the resource. If a resource does not exist, running absent is a no-operation<br>
+    You can indicate this state by adding "<<Your Provider>>.<<Your Provider Resource>><b>.absent</b>"
+<br>
+```shell
+my-virtual-network:
+azure.virtual_networks.virtual_networks.absent:
+```
+
 
 You can learn and learn more about each state at the <b>[use cases](/Use-Cases/)</b>
 
