@@ -3,29 +3,34 @@ title: "Install Idem"
 weight: 10
 ---
 
-Idem can be installed in different ways in multiple Operating System and Containers<br>
-[Python 3.6+](https://www.python.org/downloads/) is required as prerequisite.
+Idem can be installed in different ways in multiple Operating System and in Containers, also as a single binary (coming soon!)<br>
+[Python 3.6+](https://www.python.org/downloads/) is required as prerequisite for version 15.0.X, however newer idem versions may require also newer [Python 3.7+](https://www.python.org/downloads/) releases.
 
 
 {{< tabs "install" >}}
 
-{{< tab "MacOS" >}} 
+{{< tab "macOS" >}} 
 
-Installation instructions for MacOS using [Homebrew](https://brew.sh/):
+Idem and providers at the moment are version related for idem-azure-auto v0.0.3 is recommended idem v15.0.0 <br>
+macOS 12.1 & [Python 3.7.3](https://www.python.org/downloads/release/python-373/):
+
 ```shell
-# Install pyenv and pyenv-virtualenv
-brew install pyenv pyenv-virtualenv
-# Install Python 3.9.0
-pyenv install 3.9.0
-# Create a virtualenv called "salt-idem" using Python 3.9.0
-virtualenv 3.9.0 salt-idem
-# Activate the virtualenv
-pyenv local salt-idem
-# Update Python package manager
-python -m pip install --upgrade pip
+# Optional but recommended, you can create a Virtual Enviroment  
+mkdir environments
+cd environments
+python3 -m venv my_idem_env
+source my_idem_env/bin/activate
+# Upgrade to the latest PIP to meet the Crypto requirements
+python3 -m pip install --upgrade pip
 # Install Idem 
-pip install idem 
+pip3 install idem
+# Install Specific Idem Version
+pip3 install idem==15.0.0
+# Verify Version
+idem --version
 ```
+<p><b>Idem installation - macOS</b></p>
+<script id="asciicast-8BqTYhsLKbJNhLEK2z1GnpAVP" src="https://asciinema.org/a/8BqTYhsLKbJNhLEK2z1GnpAVP.js" async theme="asciinema" data-autoplay="true" data-size="small" loop="true"></script>
 
 {{< /tab >}}
 
@@ -44,6 +49,7 @@ idem --version
 {{< /tab >}}
 
 {{< tab "Ubuntu" >}}
+Idem and providers at the moment are version related for idem-azure-auto v0.0.3 is recommended idem v15.0.1<br>
 Ubuntu 18.04 & [Python 3.6.9](https://www.python.org/downloads/release/python-369/):
 
 ```shell
@@ -59,6 +65,8 @@ source my_idem_env/bin/activate
 python3 -m pip install --upgrade pip
 # Install Idem 
 pip3 install idem 
+# Install Specific Idem Version
+pip3 install idem== 15.0.0
 # Verify Version
 idem --version
 ```

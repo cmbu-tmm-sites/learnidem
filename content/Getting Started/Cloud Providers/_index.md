@@ -35,7 +35,8 @@ or you can install / upgrade to an specific release
 ```shell
 pip install idem-azure-auto==0.0.3
 ```
-Please note that the provider may have version dependencies, such as "idem-aiohttp" & [idem](Getting-Started/Install-Idem/) itself but the [pip](https://pypi.org/project/pip/) install will update them as well.
+Please note that the provider may have version dependencies, such as "idem-aiohttp" but [pip](https://pypi.org/project/pip/) install will update them most of the times.
+There are also requirements applying to [idem](Getting-Started/Install-Idem/) and Python, e.g. idem version 16.0+ requires [Python 3.7+](https://www.python.org/downloads/) however idem-azure-auto==0.0.3 is only certified up to idem version 15.0.1.
 
 You can verify installation with [pip](https://pypi.org/project/pip/)
 
