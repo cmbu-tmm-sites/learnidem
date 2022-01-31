@@ -49,7 +49,7 @@ And obtain more details, including version and required dependencies
 ```shell
 pip show idem-azure-auto
 ```
-<p><b>Idem Azure Provider Install - Ubuntu</b></p>
+<p><b>Idem Azure Provider Install </b></p>
 <script id="asciicast-nVpeQTcSDh36o4UwfFp1tHrnM" src="https://asciinema.org/a/nVpeQTcSDh36o4UwfFp1tHrnM.js" async theme="asciinema" data-autoplay="true" data-size="small" loop="true"></script>
 
 

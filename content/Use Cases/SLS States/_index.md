@@ -8,34 +8,38 @@ States can be accessed by their relative location in idem-azure-auto/idem_azure_
 For example, in the <b>State SLS</b> yaml file below, Azure resource group state can be created and subsequently updated with the [Present](/Getting-Started/Basic-Commands/) state function. 
 
 The following examples showcase how to use the available [idem states](/Getting-Started/Basic-Commands/) to work with Azure Resources.
-Make sure to export the encryption key and path to the fernet file as an environment variable as described in the [authentication section](/Getting-Started/Authenticate/) before trying the commands below
+Make sure to export the encryption key and path to the <i>fernet file</i> as an environment variable as described in the [authentication section](/Getting-Started/Authenticate/) before trying the commands below
 
 {{< tabs "usecases" >}}
 
-{{< tab "Describe 2 State" >}}
- XXXX Section Explaining how to use describe to build states : <i>my_resource_group_state.sls:</i>
-{{< /tab >}}
-
 {{< tab "Present" >}}
 
-Create an Azure Resource Group : <i>my_resource_group_state.sls:</i>
+In order to create a new Azure Resource Group, we craft the <b>my_resource_group_state.sls:</b> file with the following contents:
 
 ```yaml
-my-azure-resource-group:
+<Your Azure Resource Group Name>:
   azure.resource_management.resource_groups.present:
   - resource_group_name: <Your Azure Resource Group Name>
   - parameters:
     location: <Azure Region>
 ```
-The <b>State SLS</b> file can be executed with:
+We refer first to the Azure Idem Provider's Resource Group - "[azure.resource_management.resource_groups](/Getting-Started/Cloud-Providers/)" and we append the state directive [present](Getting-Started/Basic-Commands/), for instructing idem to <b>create</b> a new resource group in Azure.
+
+Then <b>State SLS</b> file can be executed with:
+
+```shell
+idem state <file_path>/my_resource_group_state.sls
+```
+In this example:
 
 ```shell
 idem state my_resource_group_state.sls
 ```
 
-Example of creating an Azure virtual network:
+Now, for creating an Azure virtual network, the process would be the same, we only need to change the resource pointer:
+
 ```yaml
-my-virtual-network:
+<Your Virtual Network>:
   azure.virtual_networks.virtual_networks.present:
   - resource_group_name: <Your Azure Resource Group Name>
   - virtual_network_name: <Your Virtual Network>
@@ -48,7 +52,7 @@ my-virtual-network:
       flowTimeoutInMinutes: 10
 ```
 The resource parameters in an SLS yaml file follow the exact structure as what’s in the [Azure REST API doc](https://docs.microsoft.com/en-us/rest/api/azure/).
-<b>URI Parameters</b> should be specified in snake case with “-” in front. All parameters of the API <b>request body</b> should be specified in exactly the same way as what’s in the [Azure REST API doc](https://docs.microsoft.com/en-us/rest/api/azure/).
+<b>URI Parameters</b> should be specified in each case with “-” in front. All parameters of the API <b>request body</b> should be specified in exactly the same way as what’s in the [Azure REST API doc](https://docs.microsoft.com/en-us/rest/api/azure/). Please note that we can use the [state describe](Getting-Started/Basic-Commands/) for creating SLS files with most parameters.
 
  You can include multiple resources in a single SLS yaml file.
  Some resources may have dependencies among them, for that you include [ reconciler=basic flag ](/Use-Cases/reconciler-flag/), This allows Idem-azure-auto to run Idem state
@@ -57,13 +61,102 @@ with Idem's reconciliation loop.
  {{< /tab >}}
 
   {{< tab "Present (Update)" >}}
-Update an existing an Azure Resource Group : <i>my_resource_group_state.sls:</i>
+We can also use the state directive [present](Getting-Started/Basic-Commands/), for instructing Idem to <b>update</b> an existing resource's properties or behavior, e.g. updating specific resource parameters such as : location, tags, addressprefix, etc. 
+
+Please note that due to the nature of some resources, the only way to update parameters or behaviors is by re-creating them, in those scenarios you can include the [force_update: True](/Use-Cases/Force-Update/) flag for enforcing the new present goal state.
+
+Let's update the <b>tags</b> information for an existing Azure Resource Group, in order to do that, we craft the <b>update_my_resource_group_state.sls:</b> file with the following contents:
+
+ ```yaml
+<Your Azure Resource Group Name>:
+  azure.resource_management.resource_groups.present:
+  - resource_group_name: <Your Azure Resource Group Name>
+  - parameters:
+    location: <Azure Region>
+    tags: {"createdWith": "idem"}
+```
+We added just the code line: <b>tags: {"createdWith": "idem"}</b> 
+Then <b>State SLS</b> file can be executed with:
+
+```shell
+idem state <file_path>/update_my_resource_group_state.sls
+```
+In this example:
+
+```shell
+idem state update_my_resource_group_state.sls
+```
+After that you will see Idem appending our tag information to meet our new intentention and state.
+
+
  {{< /tab >}}
 
   {{< tab "Absent" >}}
- Remove an existing Azure Resource Group : <i>my_resource_group_state.sls:</i>
+
+Once you don't need a resource, you can completely delete it by using the state directive [absent](Getting-Started/Basic-Commands/), which instructs Idem to <b>remove</b> an existing resource.
+
+Let's delete an existing Azure Resource Group, in order to do that, we craft the <b>delete_my_resource_group_state.sls:</b> file with the following contents:
+
+```yaml
+<Your Azure Resource Group Name>:
+  azure.resource_management.resource_groups.absent:
+  - resource_group_name: <Your Azure Resource Group Name>
+  - parameters:
+    location: <Azure Region>
+```
+
+Then <b>State SLS</b> file can be executed with:
+
+```shell
+idem state <file_path>/delete_my_resource_group_state.sls
+```
+In this example:
+
+```shell
+idem state delete_my_resource_group_state.sls
+```
+After that you will see Idem removing the resource group to meet our new intentention and state.
+
+
  {{< /tab >}}
 
+{{< tab "Describe 2 State" >}}
+ 
+You probably noticed that when you execute a [describe](/Use-Cases/Describe/) operation fron CLI, the output resembles the same  kind of data we have defined in SLS states examples, that is because it is exactly the same, meaning, you don't need to start from scratch to create, modify or even delete resources, you can simply issue the [describe](/Use-Cases/Describe/) operation and save the output into an SLS file then "tweak" accordingly to meet your intention.
+
+Let's say we want to add a new Azure resource group, for that I could simply describe an existing "Azure Resource Group Name" and save the output into a SLS file.
+
+```shell
+ idem describe azure.resource_management.resource_groups --filter="[?resource[?vm_name=='<Existing Azure Resource Group Name>']]" >> my_other resource_group_state.sls
+```
+
+Then we can edit the file, removing any property we don't need and updating the relevant ones, such as the name or the region, etc.<br>
+Please note, that when editing, you always need to include the minimum parameters to create any given resource (Azure Provider Documentation and even Azure Cloud API documentation provides details in this regard).
+
+ ```yaml
+<New Azure Resource Group Name>:
+  azure.resource_management.resource_groups.present:
+  - resource_group_name: <New Azure Resource Group Name>
+  - parameters:
+    location: <Azure Region>
+    tags: {"createdWith": "idem"}
+```
+
+Please make sure to indicate the state directive [present](Getting-Started/Basic-Commands/), for instructing idem to <b>create</b> a new resource group in Azure.
+
+Then <b>State SLS</b> file can be executed with:
+
+```shell
+idem state <file_path>/my_other resource_group_state.sls
+```
+In this example:
+
+```shell
+idem state my_other resource_group_state.sls
+```
+After that you will see Idem creating a new resource to meet our new intentention and state.
+
+{{< /tab >}}
 
 {{< tab "Basic End to End Azure Virtual Machine " >}}
 This example showcases how to create a basic Azure Virtual Machine, we will create the Resource Group, Re-Use an existing NIC and create the Azure Virtual Machine resource then we could update the metadata:
