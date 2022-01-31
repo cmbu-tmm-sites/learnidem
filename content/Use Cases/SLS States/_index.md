@@ -22,6 +22,7 @@ In order to create a new Azure Resource Group, we craft the <b>my_resource_group
   - resource_group_name: <Your Azure Resource Group Name>
   - parameters:
     location: <Azure Region>
+    tags: {}
 ```
 We refer first to the Azure Idem Provider's Resource Group - "[azure.resource_management.resource_groups](/Getting-Started/Cloud-Providers/)" and we append the state directive [present](Getting-Started/Basic-Commands/), for instructing idem to <b>create</b> a new resource group in Azure.
 
@@ -33,24 +34,41 @@ idem state <file_path>/my_resource_group_state.sls
 In this example:
 
 ```shell
-idem state my_resource_group_state.sls
+idem state states/my_resource_group_state.sls
 ```
+After that you will see Idem appending our tag information to meet our new intentention and state.
 
-Now, for creating an Azure virtual network, the process would be the same, we only need to change the resource pointer:
-
-```yaml
-<Your Virtual Network>:
-  azure.virtual_networks.virtual_networks.present:
-  - resource_group_name: <Your Azure Resource Group Name>
-  - virtual_network_name: <Your Virtual Network>
-  - parameters:
-    location: <Azure Region>
+```shell
+--------
+      ID: moff-idem-01
+Function: azure.resource_management.resource_groups.present
+  Result: True
+ Comment: Created
+ Changes: new:
+    ----------
+    id:
+        /subscriptions/23a8cee7-a1e4-4bb3-aff9-6898b4ee6fde/resourceGroups/moff-idem-01
+    name:
+        moff-idem-01
+    type:
+        Microsoft.Resources/resourceGroups
+    location:
+        eastus
+    tags:
+        ----------
     properties:
-      addressSpace:
-        addressPrefixes:
-        - 10.12.13.0/25
-      flowTimeoutInMinutes: 10
+        ----------
+        provisioningState:
+            Succeeded
 ```
+You can further verify by the [idem describe](/Use-Cases/Describe/) and [filter](/Use-Cases/Filter-flag/) by the resource group name.
+
+```shell
+idem describe azure.resource_management.resource_groups  --filter="[?resource[?resource_group_name=='moff-idem-01']]"
+```
+State Present:
+<script id="asciicast-kZUpVCaDPqkaXUIPP1z4XrG5J" src="https://asciinema.org/a/kZUpVCaDPqkaXUIPP1z4XrG5J.js" async theme="asciinema" data-autoplay="true" data-size="small" loop="true"></script>
+
 The resource parameters in an SLS yaml file follow the exact structure as what’s in the [Azure REST API doc](https://docs.microsoft.com/en-us/rest/api/azure/).
 <b>URI Parameters</b> should be specified in each case with “-” in front. All parameters of the API <b>request body</b> should be specified in exactly the same way as what’s in the [Azure REST API doc](https://docs.microsoft.com/en-us/rest/api/azure/). Please note that we can use the [state describe](Getting-Started/Basic-Commands/) for creating SLS files with most parameters.
 
@@ -84,10 +102,34 @@ idem state <file_path>/update_my_resource_group_state.sls
 In this example:
 
 ```shell
-idem state update_my_resource_group_state.sls
+idem state states/update_my_resource_group_state.sls
 ```
 After that you will see Idem appending our tag information to meet our new intentention and state.
+```shell
+--------
+      ID: moff-idem-01
+Function: azure.resource_management.resource_groups.present
+  Result: True
+ Comment: OK
+ Changes: old:
+    ----------
+    tags:
+        ----------
+new:
+    ----------
+    tags:
+        ----------
+        createdWith:
+            idem
 
+```
+You can further verify by the [idem describe](/Use-Cases/Describe/) and [filter](/Use-Cases/Filter-flag/) by the resource group name.
+ 
+```shell
+idem describe azure.resource_management.resource_groups  --filter="[?resource[?resource_group_name=='moff-idem-01']]"
+```
+State Present - Update (tags):
+<script id="asciicast-U0TBeuu6e5w8oWVoIhXe6q1cx" src="https://asciinema.org/a/U0TBeuu6e5w8oWVoIhXe6q1cx.js" async theme="asciinema" data-autoplay="true" data-size="small" loop="true"></script>
 
  {{< /tab >}}
 
@@ -113,10 +155,41 @@ idem state <file_path>/delete_my_resource_group_state.sls
 In this example:
 
 ```shell
-idem state delete_my_resource_group_state.sls
+idem state states/delete_my_resource_group_state.sls
 ```
 After that you will see Idem removing the resource group to meet our new intentention and state.
-
+```shell
+--------
+      ID: moff-idem-01
+Function: azure.resource_management.resource_groups.absent
+  Result: True
+ Comment: Accepted
+ Changes: old:
+    ----------
+    id:
+        /subscriptions/23a8cee7-a1e4-4bb3-aff9-6898b4ee6fde/resourceGroups/moff-idem-01
+    name:
+        moff-idem-01
+    type:
+        Microsoft.Resources/resourceGroups
+    location:
+        eastus
+    tags:
+        ----------
+        createdWith:
+            idem
+    properties:
+        ----------
+        provisioningState:
+            Succeeded
+```
+You can further verify by the [idem describe](/Use-Cases/Describe/) and [filter](/Use-Cases/Filter-flag/) by the resource group name.
+ 
+```shell
+idem describe azure.resource_management.resource_groups  --filter="[?resource[?resource_group_name=='moff-idem-01']]"
+```
+State Absent - Delete:
+<script id="asciicast-obpjtrBTOr3A4cDo5kNEdQLXt" src="https://asciinema.org/a/obpjtrBTOr3A4cDo5kNEdQLXt.js" async theme="asciinema" data-autoplay="true" data-size="small" loop="true"></script>
 
  {{< /tab >}}
 
@@ -127,10 +200,10 @@ You probably noticed that when you execute a [describe](/Use-Cases/Describe/) op
 Let's say we want to add a new Azure resource group, for that I could simply describe an existing "Azure Resource Group Name" and save the output into a SLS file.
 
 ```shell
- idem describe azure.resource_management.resource_groups --filter="[?resource[?vm_name=='<Existing Azure Resource Group Name>']]" >> my_other resource_group_state.sls
+ idem describe azure.resource_management.resource_groups --filter="[?resource[?vm_name=='<Existing Azure Resource Group Name>']]" >> <states folder>/my_other_resource_group_state.sls
 ```
 
-Then we can edit the file, removing any property we don't need and updating the relevant ones, such as the name or the region, etc.<br>
+Then we can edit the file, removing any property we don't need, "Provison States" sentences and "ID" entries, inlcuding any long names with specific "IDs", as they are generated by the system, then updating the relevant ones, such as the name or the region, or any parameter associated to the new resource<br>
 Please note, that when editing, you always need to include the minimum parameters to create any given resource (Azure Provider Documentation and even Azure Cloud API documentation provides details in this regard).
 
  ```yaml
@@ -138,24 +211,30 @@ Please note, that when editing, you always need to include the minimum parameter
   azure.resource_management.resource_groups.present:
   - resource_group_name: <New Azure Resource Group Name>
   - parameters:
-    location: <Azure Region>
-    tags: {"createdWith": "idem"}
+      location: eastus
+      name: <New Azure Resource Group Name>
+      properties:
+      tags:
+        {createdWith: idem}
+      type: Microsoft.Resources/resourceGroups
 ```
-
+Of course you can use an existing SLS File, e,g. you may have all your Resource Groups in one single SLS State file.
 Please make sure to indicate the state directive [present](Getting-Started/Basic-Commands/), for instructing idem to <b>create</b> a new resource group in Azure.
 
 Then <b>State SLS</b> file can be executed with:
 
 ```shell
-idem state <file_path>/my_other resource_group_state.sls
+idem state <file_path>/my_other_resource_group_state.sls
 ```
 In this example:
 
 ```shell
-idem state my_other resource_group_state.sls
+idem state states/my_other_resource_group_state.sls
 ```
 After that you will see Idem creating a new resource to meet our new intentention and state.
 
+State "Describe 2 State":
+<script id="asciicast-Kt6u7T78eZnRAgkfgzy86ggen" src="https://asciinema.org/a/Kt6u7T78eZnRAgkfgzy86ggen.js" async theme="asciinema" data-autoplay="true" data-size="small" loop="true"></script>
 {{< /tab >}}
 
 {{< tab "Basic End to End Azure Virtual Machine " >}}
