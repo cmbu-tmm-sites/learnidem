@@ -18,7 +18,7 @@ idem describe azure.[ supported Azure State].[Azure Resource]  --filter= "<JMESP
 Example, if we want to filter and specific existing Azure VM named "cmac-test-idem" under the account profile "tmm"
 
 ```shell
- idem describe azure.compute.virtual_machines --acct-profile tmm --filter="[?resource[?vm_name=='cmac-test-idem']]" --acct-profile tmm
+ idem describe azure.compute.virtual_machines --filter="[?resource[?vm_name=='cmac-test-idem']]" --acct-profile tmm
 ```
 
 <script id="asciicast-DP3P74Vx5us1wveqRrKvsSQkd" src="https://asciinema.org/a/DP3P74Vx5us1wveqRrKvsSQkd.js" async theme="asciinema" data-autoplay="true" data-size="small" loop="true"></script>

@@ -128,8 +128,10 @@ You can further verify by the [idem describe](/Use-Cases/Describe/) and [filter]
 ```shell
 idem describe azure.resource_management.resource_groups  --filter="[?resource[?resource_group_name=='moff-idem-01']]"
 ```
+
 State Present - Update (tags):
 <script id="asciicast-U0TBeuu6e5w8oWVoIhXe6q1cx" src="https://asciinema.org/a/U0TBeuu6e5w8oWVoIhXe6q1cx.js" async theme="asciinema" data-autoplay="true" data-size="small" loop="true"></script>
+
 
  {{< /tab >}}
 
@@ -188,6 +190,7 @@ You can further verify by the [idem describe](/Use-Cases/Describe/) and [filter]
 ```shell
 idem describe azure.resource_management.resource_groups  --filter="[?resource[?resource_group_name=='moff-idem-01']]"
 ```
+
 State Absent - Delete:
 <script id="asciicast-obpjtrBTOr3A4cDo5kNEdQLXt" src="https://asciinema.org/a/obpjtrBTOr3A4cDo5kNEdQLXt.js" async theme="asciinema" data-autoplay="true" data-size="small" loop="true"></script>
 
