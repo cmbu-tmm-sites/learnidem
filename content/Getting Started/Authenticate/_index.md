@@ -43,16 +43,39 @@ Encrypt the credentials file using the idem encrypt command, this creates a fern
 ```shell
 idem encrypt /path/to/credentials.yaml
 ```
-Please note that the output string from that command is your `ACCT_KEY`
+Please note that the output string from the command above is the key Idem uses for accessing the encrypted credentials fernet file
 
-To use the encrypted credentials file, export the encryption key and path to the fernet file as an environment variable:
 ```shell
-export ACCT_KEY=<encryption key>
+<output encryption key>
+```
+
+Example:
+```shell
+DvBsYojgU5gy51CecvhhC7Ywrsq9NL3CSg_XcLMKKn4=
+```
+
+Before start using Idem, you need to make sure your session includes the <b>ACCT_KEY</b> & <b>ACCT_FILE</b> OS environment varialbles, otherwise export the encryption key and path to the fernet file as an OS environment variable for your session:
+
+```shell
+export ACCT_KEY=<output encryption key>
 export ACCT_FILE=/path/to/credentials.yaml.fernet
 ```
-Idem retrieves the credentials from these variables while executing states. These values can also be passed as `--acct-key` and `--acct-file` options while applying the states.
+Example:
+```shell
+export ACCT_KEY=DvBsYojgU5gy51CecvhhC7Ywrsq9NL3CSg_XcLMKKn4=
+export ACCT_FILE=/home/demouser/environments/credentials.yaml.fernet
+```
 
-Credentials can be grouped using Profiles and you can define multiple profiles in same file (e.g. default, dev, staging, etc).
+Idem securely retrieves the credentials combining those OS environment variables before executing states.<br> 
+You can also pass those values as parameters of the [Idem cli](Getting-Started/Basic-Commands/) `--acct-key` and `--acct-file` options while applying the states.
+
+Example:
+```shell
+idem describe azure.virtual_networks.network_interfaces --acct-key DvBsYojgU5gy51CecvhhC7Ywrsq9NL3CSg_XcLMKKn4= --acct-file /home/demouser/environments/credentials.yaml.fernet
+```
+## Credentials and Profiles
+
+Credentials can be grouped by Providers (azurerm, aws, etc ) and Profiles (within each Providers section),<br> you can define multiple Providers and Profiles in a single configuration file (e.g. default, dev, staging, etc).<br> It is recommended to always include/define the "default" profile.
 
 ```yaml
 azurerm:
@@ -73,9 +96,19 @@ aws:
     region_name: <AWS Region>
 ```
 
-Then you can reference those account profiles with the option `--acct-profile` , please note that if you don't specific account profile, the default is used.
+When using [Idem cli](Getting-Started/Basic-Commands/) you can reference those account profiles with the option `--acct-profile` and the profile name,<br>
+e.g. the following command will instruct [Idem](/Getting-Started/Install-Idem/) to use the Azure credentials associated to the "tmm" profile
 
 ```shell
 idem describe azure.compute.virtual_machines --acct-profile tmm
 ```
+
+Please note that if you don't specific the account profile flag `--acct-profile`, the default profile is going to be used (if profile default is defined at the configuration yaml)<br>
+e.g. the following command will instruct [Idem](/Getting-Started/Install-Idem/) to use the Azure credentials associated to the "default" profile
+
+```shell
+idem describe azure.compute.virtual_machines 
+```
+
+[Describe](/Use-Cases/Describe/) Azure VM Machines within the "tmm" profile example:
 <script id="asciicast-SiXcq1OmVkca57LNf2m6N4wWK" src="https://asciinema.org/a/SiXcq1OmVkca57LNf2m6N4wWK.js" async theme="asciinema" data-autoplay="true" data-size="small" loop="true"></script>
