@@ -21,7 +21,7 @@ Using a cloud should not require you to write massive amounts of code
 Idem reduces your cloud configuration to data – for you! Instead of Infrastructure as Code, Idem delivers Infrastructure as Data. The cloud becomes simplified, easier to maintain, easier to discover, and easier to use.
 Be liberated from writing and maintaining that mountain of code!
 
-Idem is the culmination of a decade of research led by the VMware and the SaltStack teams. Idem seeks to solve a vast array of problems present in systems automation. Diving into the weeds of how Idem works opens up significant automation concepts and capabilities. But do not be intimidated! Everything has been designed to present everyone involved with simple, easy to use, and easy to understand concepts. The Idem team feels that the biggest challenge in software design is making software easy to use and learn. This goes for everyone involved, user and developer alike.
+Idem is the culmination of a decade of research led by the [VMware](https://www.vmware.com/) and the [SaltStack](https://www.vmware.com/products/vrealize-automation/saltstack-config.html) teams. Idem seeks to solve a vast array of problems present in systems automation. Diving into the weeds of how Idem works opens up significant automation concepts and capabilities. But do not be intimidated! Everything has been designed to present everyone involved with simple, easy to use, and easy to understand concepts. The Idem team feels that the biggest challenge in software design is making software easy to use and learn. This goes for everyone involved, user and developer alike.
 
 This documentation and these tutorials' goals are to get you moving as fast as possible. In depth explanations are available, but please don't get too bogged down with them on day 1, we want to get you solving problems, first, get your PhD. in Idem later!
 
@@ -38,6 +38,6 @@ Take the data in your cloud description and use idem to enforce it. Sending the 
 With Idem, the term “Cloud” does not just mean cloud providers like AWS, Azure, and GCP, it means all things SaaS. Idem can describe and enforce sites like GitLab.com. Anything and everything that has an API is fair game for Idem.
 
 ### This is Just the Beginning
-Idem is an open source, Apache Licensed project from the minds of VMware’s top engineers. The goals of Idem are significant. We are seeking to create a universal cloud automation engine that can be leveraged to drive new ways to automate far more than just cloud infrastructure. We have come together with next generation concepts to allow us to keep up with cloud and API changes faster than anything developed in the past. By taking the burden of
+Idem is an open source, Apache Licensed project from the minds of [VMware](https://www.vmware.com/) ’s top engineers. The goals of Idem are significant. We are seeking to create a universal cloud automation engine that can be leveraged to drive new ways to automate far more than just cloud infrastructure. We have come together with next generation concepts to allow us to keep up with cloud and API changes faster than anything developed in the past. By taking the burden of
 
 {{< button icon="fas fa-angle-double-right" url="Getting-Started" >}}Get Started{{< /button >}}
