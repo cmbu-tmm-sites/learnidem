@@ -15,6 +15,8 @@ In order to create a new Azure Resource Group, we craft the <b>my_resource_group
 ```
 We refer first to the Azure Idem Provider's Resource Group - "[azure.resource_management.resource_groups](/Getting-Started/Cloud-Providers/)" and we append the state directive [present](Getting-Started/Basic-Commands/), for instructing idem to <b>create</b> a new resource group in Azure.
 
+Please note that you can map Azure REST API's  URI and Body Parameters to the state parameters, e.g. for the [Azure Resource Group](https://docs.microsoft.com/en-us/rest/api/resources/resource-groups/create-or-update) 
+
 Then <b>State SLS</b> file can be executed with:
 
 ```shell

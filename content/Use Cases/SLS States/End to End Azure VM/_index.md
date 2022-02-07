@@ -123,7 +123,7 @@ Example for <b>Public IP</b>:
 ```shell
 /subscriptions/23a8cee7-a1e4-4bb3-aff9-6898b4ee6fde/resourceGroups/moff-idem-rg-01/providers/Microsoft.Network/publicIPAddresses/moff-idem-pub-ip
 ```
-You can learn more of Azure Resource URL in Azure API Doc.
+You can learn more of Azure Resource URL in [Azure API Doc](https://docs.microsoft.com/en-us/rest/api/azure/).
 
 # Network Interfaces
 ```yaml
