@@ -21,4 +21,4 @@ There are some basic commands that are used often with Idem. In this section you
 
 #### Other Resources
 Idem is based on the concept of [Plugin Oriented Programming](https://pop.readthedocs.io/en/latest/)</br>
-More documentation [readthedocs](https://idem.readthedocs.io/en/latest/)
+[Documentation Resources](/Documentation-Resources/)

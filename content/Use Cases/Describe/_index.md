@@ -17,15 +17,22 @@ The <b>Resource</b>, indicates the specific resources type you want to work with
 
 Refer to [Idem Azure Provider](/Getting-Started/Cloud-Providers/idem-azure-auto/) for a list of supported <b>Resource States Group</b> & associated <b>Resources</b>
 
+
 Example, if we want to list existing VMs, I will 
 
 ```shell
 idem describe azure.compute.virtual_machines
 ```
 
+Please note that you can describe specific resources with the [Filter Flag](/Use-Cases/Filter-flag/)
+
+```shell
+idem describe azure.compute.virtual_machines --filter="[?resource[?vm_name=='cmac-test-idem']]"
+```
+
 <script id="asciicast-SiXcq1OmVkca57LNf2m6N4wWK" src="https://asciinema.org/a/SiXcq1OmVkca57LNf2m6N4wWK.js" async theme="asciinema" data-autoplay="true" data-size="small" loop="true"></script>
 
-or, if we want to list existing Virtual Networks
+or, if we want to list existing Virtual Networks (or any other resource supported by the provider)
 
 ```shell
 idem describe azure.virtual_networks.virtual_networks
@@ -33,5 +40,5 @@ idem describe azure.virtual_networks.virtual_networks
 
 <script id="asciicast-iolx0POfh5rLl4XBOxktnOlzl" src="https://asciinema.org/a/iolx0POfh5rLl4XBOxktnOlzl.js" async theme="asciinema" data-autoplay="true" data-size="small" loop="true"></script>
 
+Learn more about using describe with the [Filter Flag](/Use-Cases/Filter-flag/)
 
- You can describe specific results with the [Filter Flag](/Use-Cases/Filter-flag/)
