@@ -11,7 +11,7 @@ You can use [describe](/Getting-Started/Basic-Commands/) directive below to disc
 ```shell
 idem describe [provider].[Resource States Group].[Resource] 
 ```
-The <b>provider</b>, tells [idem](/Getting-Started/Basic-Commands/) which provider to access.<br>
+The <b>Provider</b>, tells [idem](/Getting-Started/Basic-Commands/) which provider to access.<br>
 The <b>Resource States Group</b>, organizes resources of the same type or topic, e.g. the Azure Compute or Azure Virtual_Networks.<br>
 The <b>Resource</b>, indicates the specific resources type you want to work with, e.g. Virtual Machines or Network Interfaces, etc.<br>
 

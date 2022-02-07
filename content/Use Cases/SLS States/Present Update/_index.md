@@ -5,7 +5,7 @@ weight: 25
 
 We can also use the state directive [present](Getting-Started/Basic-Commands/), for instructing Idem to <b>update</b> an existing resource's properties or behavior, e.g. updating specific resource parameters such as : location, tags, addressprefix, etc. 
 
-Please note that due to the nature of some resources, the only way to update parameters or behaviors is by re-creating them, in those scenarios you can include the [force_update: True](/Use-Cases/Force-Update/) flag for enforcing the new present goal state.
+Please note that due to the nature of some resources, the only way to update parameters or behaviors is by re-creating them, in those scenarios you can include the [force_update: True](/Use-Cases/SLS-States/Present-Update/Force-Update/) flag for enforcing the new present goal state.
 
 Let's update the <b>tags</b> information for an existing Azure Resource Group, in order to do that, we craft the <b>update_my_resource_group_state.sls:</b> file with the following contents:
 
