@@ -3,9 +3,10 @@ title: "Resources and SLS"
 weight: 55
 ---
 
-This example showcases how to combine multiple resources in one single SLS State file, for creating a basic Azure Virtual Machine, we will create the Resource Group, Re-Use an existing NIC and then create the Azure Virtual Machine resource, then we will update the metadata:
+In this section, we showcase how to combine multiple resources in one single SLS State file, we will create a basic Azure Virtual Machine, for that, first we will bring up the Resource Group, we will leverage and re-use an existing NIC for assigning both to the Azure Virtual Machine resource in order to create it, and finally we will update its metadata.
 
 Later on, at the [End To End Azure VM Usecase](/Use-Cases/SLS-States/End-to-End-Azure-VM/), you will be able to reference other and more types of resources.
+
 
 Let's first create an Azure Resource Group named "moff-idem-01"
 
