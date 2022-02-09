@@ -16,6 +16,18 @@ This example showcases how to create, combine and reference multiple [Idem Azure
 <br>
 At the end we will have created an Azure Virtual Machine ( which includes attributes such as SSH Key authentication and Cloud-Init ).
 
+<b style="color:blue;">Important</b> You can follow this example with two different approaches:<br>
+1) Add all the resources and wait until the end to execute the state - Default
+    - You will have to provide manually the resources' ID to cross-references dependencies, which it is simple and explained below.
+    - When you execute the state, you must include the [reconciler=basic](/How-to-use-Idem/States/reconciler-flag/) flag (as indicated at the step).
+    <br>
+
+2) Execute the state each time, right after you add each resource, until you add 'em all - "Idemon".
+   - Every time you add a new resource and apply the state, the output will include the associated ID when created, which you can cut and paste for any other resource that may have a dependency. 
+   - In this mode, the [reconciler=basic](/How-to-use-Idem/States/reconciler-flag/) flag is not mandatory.
+
+
+
 Let's create a new SLS file named "goapp.sls"<br>
 
 First let's add a <b>Resource Group</b>
