@@ -31,36 +31,7 @@ In this case, the output of the command shows our network interface available
       "id: /subscriptions/23a8cee7-a1e4-4bb3-aff9-6898b4ee6fde/resourceGroups/group8a87dd00ea7183a729588634c88e5123/providers/Microsoft.Network/networkInterfaces/default"
       location: centralus
       name: default
-      properties:
-        dnsSettings:
-          appliedDnsServers: []
-          dnsServers: []
-        enableAcceleratedNetworking: false
-        enableIPForwarding: false
-        hostedWorkloads: []
-        ipConfigurations:
-        - etag: W/6f33dd08-64fa-4d11-8c17-2d9fdea97671
-          id: /subscriptions/23a8cee7-a1e4-4bb3-aff9-6898b4ee6fde/resourceGroups/group8a87dd00ea7183a729588634c88e5123/providers/Microsoft.Network/networkInterfaces/default/ipConfigurations/nicconfig8a87dd00ea7183a729588634c88e5123
-          name: nicconfig8a87dd00ea7183a729588634c88e5123
-          properties:
-            primary: true
-            privateIPAddress: 10.0.0.8
-            privateIPAddressVersion: IPv4
-            privateIPAllocationMethod: Dynamic
-            provisioningState: Succeeded
-            publicIPAddress:
-              id: /subscriptions/23a8cee7-a1e4-4bb3-aff9-6898b4ee6fde/resourceGroups/group8a87dd00ea7183a729588634c88e5123/providers/Microsoft.Network/publicIPAddresses/VNF-Primary-CSCF-1-002668-pip
-            subnet:
-              id: /subscriptions/23a8cee7-a1e4-4bb3-aff9-6898b4ee6fde/resourceGroups/Moff-RG01-CAS/providers/Microsoft.Network/virtualNetworks/vNet1-MoffCAS01/subnets/default
-          type: Microsoft.Network/networkInterfaces/ipConfigurations
-        macAddress: 00-0D-3A-A5-4A-E9
-        networkSecurityGroup:
-          id: /subscriptions/23a8cee7-a1e4-4bb3-aff9-6898b4ee6fde/resourceGroups/Moff-RG01-CAS/providers/Microsoft.Network/networkSecurityGroups/Moff-CAS-Default
-        nicType: Standard
-        provisioningState: Succeeded
-        resourceGuid: 33b57d86-1cfd-4c05-9772-92cfcc1e0f6c
-        tapConfigurations: []
-        vnetEncryptionSupported: false
+....
 ```
 
 Now, let's write a new state <b>"vm_moff_present.sls"</b> defining our Azure VM
@@ -134,83 +105,7 @@ Function: azure.compute.virtual_machines.present
         /subscriptions/23a8cee7-a1e4-4bb3-aff9-6898b4ee6fde/resourceGroups/moff-idem-01/providers/Microsoft.Compute/virtualMachines/Development-idem-015042
     type:
         Microsoft.Compute/virtualMachines
-    location:
-        centralus
-    properties:
-        ----------
-        vmId:
-            1ae9935c-3699-4837-a59d-a2938b24644d
-        hardwareProfile:
-            ----------
-            vmSize:
-                Standard_A5
-        storageProfile:
-            ----------
-            imageReference:
-                ----------
-                publisher:
-                    Canonical
-                offer:
-                    UbuntuServer
-                sku:
-                    18.04-LTS
-                version:
-                    18.04.201804262
-                exactVersion:
-                    18.04.201804262
-            osDisk:
-                ----------
-                osType:
-                    Linux
-                createOption:
-                    FromImage
-                caching:
-                    ReadWrite
-                managedDisk:
-                    ----------
-                    storageAccountType:
-                        Standard_LRS
-                deleteOption:
-                    Detach
-                diskSizeGB:
-                    30
-            dataDisks:
-        osProfile:
-            ----------
-            computerName:
-                Development-idem-015042
-            adminUsername:
-                azureuser
-            linuxConfiguration:
-                ----------
-                disablePasswordAuthentication:
-                    False
-                provisionVMAgent:
-                    True
-                patchSettings:
-                    ----------
-                    patchMode:
-                        ImageDefault
-                    assessmentMode:
-                        ImageDefault
-            secrets:
-            allowExtensionOperations:
-                True
-            requireGuestProvisionSignal:
-                True
-        networkProfile:
-            ----------
-            networkInterfaces:
-                |_
-                  ----------
-                  id:
-                      /subscriptions/23a8cee7-a1e4-4bb3-aff9-6898b4ee6fde/resourceGroups/group8a87dd00ea7183a729588634c88e5123/providers/Microsoft.Network/networkInterfaces/default
-                  properties:
-                      ----------
-                      primary:
-                          True
-        "provisioningState:
-            Creating"
+.....
 ```
 
 Then you can search for the newly created Azure VM with [describe](/How-to-use-Idem/Describe/)
