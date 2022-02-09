@@ -26,7 +26,7 @@ aws:
 Create a `credentials.yaml` file - the `default` profile will be used unless specified in the command or state file:
 
 ```yaml
-azurerm:
+azure:
    default:
       client_id: "<Your Client ID>"
       secret: "<Your Secret key>"
@@ -75,10 +75,12 @@ idem describe azure.virtual_networks.network_interfaces --acct-key DvBsYojgU5gy5
 ```
 ## Credentials and Profiles
 
-Credentials can be grouped by Providers (azurerm, aws, etc ) and Profiles (within each Providers section),<br> you can define multiple Providers and Profiles in a single configuration file (e.g. default, dev, staging, etc).<br> It is recommended to always include/define the "default" profile.
+Credentials can be grouped by Plug-Ins (azure, aws, etc ) and Profiles (within each Plug-Ins section),<br> you can define multiple Plug-Ins and Profiles in a single configuration file (e.g. default, dev, staging, etc).<br> It is recommended to always include/define the "default" profile.<br>
+
+E.g. credentials.yaml file with multiple account profiles.
 
 ```yaml
-azurerm:
+azure:
    default:
       client_id: "<Your Client ID>"
       secret: "<Your Secret key>"
@@ -96,18 +98,18 @@ aws:
     region_name: <AWS Region>
 ```
 
-When using [Idem cli](Getting-Started/Basic-Commands/) you can reference those account profiles with the option `--acct-profile` and the profile name,<br>
-e.g. the following command will instruct [Idem](/Getting-Started/Install-Idem/) to use the Azure credentials associated to the "tmm" profile
+With Idem, You use the account profile flag `--acct-profile` to indicate which specific profile and associated set of credentials to be used. Please note that if you don't specific the account profile flag `--acct-profile`, the default profile is going to be always used (if profile default is defined at the configuration yaml)<br>
 
-```shell
-idem describe azure.compute.virtual_machines --acct-profile tmm
-```
-
-Please note that if you don't specific the account profile flag `--acct-profile`, the default profile is going to be used (if profile default is defined at the configuration yaml)<br>
-e.g. the following command will instruct [Idem](/Getting-Started/Install-Idem/) to use the Azure credentials associated to the "default" profile
+The following command will instruct [Idem](/Getting-Started/Install-Idem/) to use the Azure credentials associated to the "default" profile
 
 ```shell
 idem describe azure.compute.virtual_machines 
+```
+
+The following command will instruct [Idem](/Getting-Started/Install-Idem/) to use the Azure credentials associated to the "tmm" profile  ( per credentials.yaml file from lines above)
+
+```shell
+idem describe azure.compute.virtual_machines --acct-profile tmm
 ```
 
 [Describe](/Use-Cases/Describe/) Azure VM Machines within the "tmm" profile example:

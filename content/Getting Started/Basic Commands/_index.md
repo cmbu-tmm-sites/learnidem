@@ -44,7 +44,7 @@ You will use mostly a combination of <b>describe</b> (Discover status and helper
     Commands to run execution routines, normally used internally in idem code
 {{< /tab >}}
 
-{{< tab "States - SLS" >}}
+{{< tab "States" >}}
  
 <b>Present State</b>
     makes sure a <b>resource exists in a desired state</b>. If a resource does not exist, running present will create the resource on the provider. If a resource exists, running present will <b>update</b> the resource on the provider. (Only the values that the Cloud Provider REST API supports can be updated). <br>

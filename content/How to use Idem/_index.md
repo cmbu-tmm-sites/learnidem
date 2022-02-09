@@ -1,5 +1,5 @@
 ---
-title: "Use Cases"
+title: "How to use Idem"
 weight: 40
 ---
 

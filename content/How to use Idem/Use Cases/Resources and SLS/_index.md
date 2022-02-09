@@ -5,7 +5,7 @@ weight: 55
 
 In this section, we showcase how to combine multiple resources in one single SLS State file, we will create a basic Azure Virtual Machine, for that, first we will bring up the Resource Group, we will leverage and re-use an existing NIC for assigning both to the Azure Virtual Machine resource in order to create it, and finally we will update its metadata.
 
-Later on, at the [End To End Azure VM Usecase](/Use-Cases/SLS-States/End-to-End-Azure-VM/), you will be able to reference other and more types of resources.
+Later on, at the [End To End Azure VM Usecase](/How-to-use-Idem/Use-Cases/End-to-End-Azure-VM/), you will be able to reference other and more types of resources.
 
 
 Let's first create an Azure Resource Group named "moff-idem-01"
@@ -13,7 +13,7 @@ Let's first create an Azure Resource Group named "moff-idem-01"
 We can do it by writing the following state <b>"rg_moff_present.sls"</b>
 that includes the idem [present](/Getting-Started/Basic-Commands/) directive for <b>azure.resource_management.resource_groups</b>
 
-```shell
+```yaml
 moff-idem-01:
   azure.resource_management.resource_groups.present:
   - resource_group_name: moff-idem-01

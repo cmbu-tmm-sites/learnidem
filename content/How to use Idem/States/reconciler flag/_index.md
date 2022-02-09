@@ -1,10 +1,10 @@
 ---
 title: "Reconcilier Flag"
-weight: 25
+weight: 50
 ---
 Suppose you have an SLS file with both virtual-network and subnet. 
 Because a subnet depends on a virtual-network, if you just run Idem state once, requesting a subnet will fail.
-However whenever you include the <b>reconciler=basic</b> flag, this instruct idem to run a <b>reconciliation loop</b> that will automatically re-run [Idem state](/Use-Cases/SLS-States/), until the subnet gets created successfully.
+However whenever you include the <b>reconciler=basic</b> flag, this instruct idem to run a <b>reconciliation loop</b> that will automatically re-run [Idem state](/Getting-Started/Basic-Commands/), until the subnet gets created successfully.
 
 The following examples showcase how to use the the <b>reconciler=basic</b> flag to create an Azure Resource Group and a Virtual-Network which depends on the same Resource Group we will create.<br>
 Make sure to export the encryption key and path to the fernet file as an environment variable as described in the [authentication section](/Getting-Started/Authenticate/) before trying the commands below

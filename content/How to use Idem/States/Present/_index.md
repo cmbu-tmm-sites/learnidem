@@ -13,7 +13,7 @@ In order to create a new Azure Resource Group, we craft the <b>my_resource_group
     location: <Azure Region>
     tags: {}
 ```
-We refer first to the Azure Idem Provider's Resource Group - "[azure.resource_management.resource_groups](/Getting-Started/Cloud-Providers/)" and we append the state directive [present](Getting-Started/Basic-Commands/), for instructing idem to <b>create</b> a new resource group in Azure.
+We refer first to the Azure Idem Plug-In's Resource Group - "[azure.resource_management.resource_groups](//Getting-Started/Cloud-Plug-Ins/Idem-Azure-Plug-In/)" and we append the state directive [present](Getting-Started/Basic-Commands/), for instructing idem to <b>create</b> a new resource group in Azure.
 
 Please note that you can map Azure REST API's  URI and Body Parameters to the state parameters, e.g. for the [Azure Resource Group](https://docs.microsoft.com/en-us/rest/api/resources/resource-groups/create-or-update) 
 
@@ -52,7 +52,7 @@ Function: azure.resource_management.resource_groups.present
         provisioningState:
             Succeeded
 ```
-You can further verify by the [idem describe](/Use-Cases/Describe/) and [filter](/Use-Cases/Filter-flag/) by the resource group name.
+You can further verify by the [idem describe](/How-to-use-Idem/Describe/) and [filter](/How-to-use-Idem/Filter-flag/) by the resource group name.
 
 ```shell
 idem describe azure.resource_management.resource_groups  --filter="[?resource[?resource_group_name=='moff-idem-01']]"
@@ -61,8 +61,8 @@ State Present:
 <script id="asciicast-kZUpVCaDPqkaXUIPP1z4XrG5J" src="https://asciinema.org/a/kZUpVCaDPqkaXUIPP1z4XrG5J.js" async theme="asciinema" data-autoplay="true" data-size="small" loop="true"></script>
 
 The resource parameters in an SLS yaml file follow the exact structure as what’s in the [Azure REST API doc](https://docs.microsoft.com/en-us/rest/api/azure/).
-<b>URI Parameters</b> should be specified in each case with “-” in front. All parameters of the API <b>request body</b> should be specified in exactly the same way as what’s in the [Azure REST API doc](https://docs.microsoft.com/en-us/rest/api/azure/). Please note that we can use the [state describe](Getting-Started/Basic-Commands/) for creating SLS files with most parameters.
+<b>URI Parameters</b> should be specified in each case with “-” in front. All parameters of the API <b>request body</b> should be specified in exactly the same way as what’s in the [Azure REST API doc](https://docs.microsoft.com/en-us/rest/api/azure/). Please note that we can use the [state describe](/How-to-use-Idem/Describe/) for creating SLS files with most parameters.
 
  You can include multiple resources in a single SLS yaml file.
- Some resources may have dependencies among them, for that you include [ reconciler=basic flag ](/Use-Cases/reconciler-flag/), This allows Idem-azure-auto to run Idem state
+ Some resources may have dependencies among them, for that you include [ reconciler=basic flag ](/How-to-use-Idem/States/reconciler-flag/), This allows Idem-azure-auto to run Idem state
 with Idem's reconciliation loop.

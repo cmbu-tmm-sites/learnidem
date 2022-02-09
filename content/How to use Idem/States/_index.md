@@ -1,6 +1,6 @@
 ---
-title: "SLS States"
-weight: 15
+title: "States"
+weight: 25
 ---
 
 States can be defined as yaml definitions and captured in files with extension <b>SLS</b> <br>

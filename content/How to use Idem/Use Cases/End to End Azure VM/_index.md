@@ -3,7 +3,7 @@ title: "End to End Azure VM"
 weight: 65
 ---
 
-This example showcases how to create, combine and reference multiple [Idem Azure Provider Resources](/Getting-Started/Cloud-Providers/):<br>
+This example showcases how to create, combine and reference multiple [Idem Azure Plug-In Resources](/Getting-Started/Cloud-Plug-Ins/Idem-Azure-Plug-In/):<br>
 <ul>
  <li><p><b>Resource Group</b></p></li>
  <li><p><b>Virtual Network</b></p></li>
@@ -207,10 +207,10 @@ Development-idem-015:
         requestedby: hernandezf@vmware.com
 ```
 
-Save your file and we are ready for deployment, please note that all the resources have the [Idem Present Directive](/Getting-Started/Basic-Commands/) and that we must include the [reconcilier flag](/Use-Cases/reconciler-flag/), so [Idem](/) can loop for all the dependencies resources to be created.
+Save your file and we are ready for deployment, please note that all the resources have the [Idem Present Directive](/Getting-Started/Basic-Commands/) and that we must include the [reconcilier flag](/How-to-use-Idem/States/reconciler-flag/), so [Idem](/) can loop for all the dependencies resources to be created.
 
 ```shell
 idem state my_resource_group_state.sls --reconciler=basic
 ```
 
-You can then use [Idem describe](/Use-Cases/Describe/) to validate all your resources are created (BTW, it would be a good idea to use your own SSH public Key, this one is fake)
+You can then use [Idem describe](/How-to-use-Idem/Describe/) to validate all your resources are created (BTW, it would be a good idea to use your own SSH public Key, this one is fake)

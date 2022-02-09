@@ -1,6 +1,6 @@
 ---
 title: "Filter Flag"
-weight: 25
+weight: 20
 ---
 You can display specific Azure resources by <b>Filter</b> flag with the [describe](/Getting-Started/Basic-Commands/) command.<br>
 Filter criteria is based on [JMESPath](https://jmespath.org/) whichis a query language for JSON. You can extract and transform elements from a JSON document.<br> 
