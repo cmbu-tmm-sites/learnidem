@@ -67,7 +67,7 @@ python3 -m pip install --upgrade pip
 # Install Idem 
 pip3 install idem 
 # Install Specific Idem Version
-pip3 install idem== 15.0.0
+pip3 install idem==15.0.0
 # Verify Version
 idem --version
 ```
