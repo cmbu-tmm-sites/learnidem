@@ -66,6 +66,20 @@ pip show idem-azure-auto
 
 
 {{< /tab >}}
+{{< tab "Container Bundle" >}}
+You can pull the container image bundle that includes the idem + idem-azure-auto plug-in
+
+```shell
+# GitHub Container Repository
+docker pull ghcr.io/vmwarecmbutmm/idem-container:latest
+# Docker Hub
+docker pull vmwarecmbu/idem-container:latest
+```
+
+You can also learn how to launch it and gain access to the Dockerfile at [VMwareCMBUTMM/idem-container](https://github.com/VMwareCMBUTMM/idem-container)
+
+
+{{< /tab >}}
 {{< /tabs >}}
 
 After Installing the Plug-Ins you can now set up the credentials needed for the Plug-Ins to [authenticate](/Getting-Started/Authenticate/)<br>
