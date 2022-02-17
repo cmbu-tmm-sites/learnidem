@@ -5,7 +5,9 @@ weight: 10
 
 Idem can be installed in different ways in multiple Operating System and in Containers, also as a [single binary](https://repo.idemproject.io/)<br>
 Idem is written in [Python](https://www.python.org/) and distributed on [Pypi](https://pypi.org/project/pip/), so it is just a quick pip install away<br>
-[Python 3.6+](https://www.python.org/downloads/) is required as prerequisite for version 15.0.X, however newer idem versions may require also newer [Python 3.7+](https://www.python.org/downloads/) releases.
+[Python 3.6+](https://www.python.org/downloads/) is required as prerequisite for version 15.0.X, however newer idem versions may require also newer [Python 3.7+](https://www.python.org/downloads/) releases.<br>
+
+You can also pull the container image bundle that includes the idem + the selected plug-in, this is an excellent alternative to avoid system dependencies errors. More information under each [Cloud Plug-Ins](/Getting-Started/Cloud-Plug-Ins/) install instructions.
 
 
 {{< tabs "install" >}}
