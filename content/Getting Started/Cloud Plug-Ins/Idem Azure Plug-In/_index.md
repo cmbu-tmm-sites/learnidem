@@ -71,9 +71,8 @@ You can pull the container image bundle that includes the idem + idem-azure-auto
 
 ```shell
 # GitHub Container Repository
-docker pull ghcr.io/vmwarecmbutmm/idem-container:latest
-# Docker Hub
-docker pull vmwarecmbu/idem-container:latest
+docker pull ghcr.io/vmwarecmbutmm/idem-container:azure-latest
+
 ```
 
 You can also learn how to launch it and gain access to the Dockerfile at [VMwareCMBUTMM/idem-container](https://github.com/VMwareCMBUTMM/idem-container)

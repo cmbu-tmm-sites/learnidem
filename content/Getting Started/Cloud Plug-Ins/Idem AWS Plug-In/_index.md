@@ -73,7 +73,7 @@ You can pull the container image bundle that includes the idem + idem-aws plug-i
 
 ```shell
 # GitHub Container Repository
-docker pull ghcr.io/moffzilla/tmm-idem-aws:1701-0170
+docker pull ghcr.io/vmwarecmbutmm/idem-container:aws-latest
 
 ```
 
