@@ -9,7 +9,7 @@ disablePathToLower = true
 enableGitInfo = true
 
 [params]
-    logo = "/images/1254756-oss-id-idem-project.jpg"
+    logo = "/images/1254756-oss-id-idem-project_stacked.jpg"
 
     # Source Code repository section
     description = "   Powered by Idem Project"
