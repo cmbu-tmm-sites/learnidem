@@ -20,4 +20,6 @@ Discover Developer resources and collaborate with the community.
 <br>
 {{< button icon="fas fa-angle-double-right" url="https://jmespath.org/tutorial.html" >}}JMESPath Tutorial{{< /button >}}
 <br>
+{{< button icon="fas fa-angle-double-right" url="https://jinja.palletsprojects.com/en/3.0.x/" >}}Jinja Templates{{< /button >}}
+<br>
 
