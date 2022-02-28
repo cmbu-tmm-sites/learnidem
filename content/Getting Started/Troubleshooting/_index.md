@@ -46,7 +46,13 @@ idem-gitlab        1.0.0   /Users/sammcgeown/SCRIPTS/idem/idem-gitlab
 ```
 
 - By default <b>idem.log</b> will be written at your environment home, 
-you can change the location and log level with idem command line
+you can change the location and log level with idem command line to obtain more detailed information
+
+```shell
+idem describe aws.ec2.vpc --log-level debug
+```
+
+More logging options are available:
 
 ```shell
 Logging Options:
