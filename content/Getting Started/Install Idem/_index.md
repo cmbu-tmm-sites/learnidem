@@ -78,6 +78,32 @@ idem --version
 
 {{< /tab >}}
 
+{{< tab "CentOS" >}}
+Idem and providers at the moment are version related for idem-azure-auto v0.0.3 is recommended idem v15.0.1<br>
+CentOS 7.9 & [Python 3.6.8](https://www.python.org/downloads/release/python-368/):
+CentOS 8 can be also used, replace "yum" per "dnf"
+
+```shell
+# Install Base Packages
+sudo yum update -y
+sudo yum -y groupinstall development
+# Optional, you can create a Virtual Enviroment  
+mkdir environments
+cd environments
+python3 -m venv my_idem_env
+source my_idem_env/bin/activate
+# Upgrade to the latest PIP to meet the Crypto requirements
+python3 -m pip install --upgrade pip
+# Install Idem 
+pip3 install idem 
+# Install Specific Idem Version
+pip3 install idem==15.0.0
+# Verify Version
+idem --version
+```
+
+{{< /tab >}}
+
 {{< /tabs >}}
 
 At this point you can install [Cloud Providers](/Getting-Started/Cloud-Providers/) then set up the credentials to [authenticate](/Getting-Started/Authenticate/) with the Idem Cloud Providers.
