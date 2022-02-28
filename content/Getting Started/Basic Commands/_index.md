@@ -4,7 +4,7 @@ weight: 40
 ---
 
 Idem provides the [idem cli](/Getting-Started/Install-Idem/) which allows to describe resources but also invoke states.<br>
-[Idem states](/Use-Cases/SLS-States/) are used to make sure resources are in a desired state. The desired state of a resource can be specified in SLS file.
+[Idem states](/How-to-use-Idem/States/) are used to make sure resources are in a desired state. The desired state of a resource can be specified in SLS file.
 
 {{< tabs "commands" >}}
 
@@ -25,14 +25,14 @@ idem decrypt /path/to/credentials_test.yaml.fernet
 ```
 
 <b>describe</b><br>
-    Commands to run description routines, e.g. [Listing and obtaining existing VMs details](/Use-Cases/Describe/)
+    Commands to run description routines, e.g. [Listing and obtaining existing VMs details](/How-to-use-Idem/Describe/)
 
 ```shell
 idem describe azure.compute.virtual_machines
 ```
 
 <b>state</b><br>
-    Commands to run idempotent states, e.g. [create, update, and in general manage your resources](/Use-Cases/SLS-States/) 
+    Commands to run idempotent states, e.g. [create, update, and in general manage your resources](/How-to-use-Idem/States/) 
 
 ```shell
 idem state vm_moff_present.sls
@@ -65,7 +65,7 @@ azure.virtual_networks.virtual_networks.absent:
 ```
 
 
-You can learn and learn more about each state at the <b>[use cases](/Use-Cases/)</b>
+You can learn and learn more about each state at the <b>[use cases](/How-to-use-Idem/Use-Cases/)</b>
 
 
 {{< /tab >}}

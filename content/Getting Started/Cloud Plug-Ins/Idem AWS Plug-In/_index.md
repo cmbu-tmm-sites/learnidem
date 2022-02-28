@@ -83,4 +83,4 @@ You can also learn how to launch it and gain access to the Dockerfile at [VMware
 {{< /tabs >}}
 
 After Installing the Plug-Ins you can now set up the credentials needed for the Plug-Ins to [authenticate](/Getting-Started/Authenticate/)<br>
-Then you could follow a few [use case examples ](/Use-Cases/)
+Then you could follow a few [use case examples ](/How-to-use-Idem/Use-Cases/)

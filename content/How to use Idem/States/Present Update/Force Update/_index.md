@@ -30,7 +30,7 @@ Let's say I have already the Azure Virtual Network : vNet1-Idem
         virtualNetworkPeerings: []
       type: Microsoft.Network/virtualNetworks
 ```
-and we need to update the Address Prefix from 10.0.0.0/24 to 10.12.13.0/25, we could do it by updating an SLS file and executing [idem state](/Use-Cases/SLS-States/), however due to the nature of the virtual network resource, it needs to be recreated, so we could only do it by running the same SLS file but this time explicitly including the <b>force_update</b> set to "True"
+and we need to update the Address Prefix from 10.0.0.0/24 to 10.12.13.0/25, we could do it by updating an SLS file and executing [idem state](/How-to-use-Idem/Use-Cases/), however due to the nature of the virtual network resource, it needs to be recreated, so we could only do it by running the same SLS file but this time explicitly including the <b>force_update</b> set to "True"
 
 ```yaml
 vNet1-Idem:

@@ -89,7 +89,7 @@ moff-idem-pub-ip:
         publicIPAddressVersion: IPv4
 ```
 
-Same story for a <b>Security Groups</b>, we reference our <b>Resource Group</b> by providing only its name, however notice that we include a [force_update](/Use-Cases/Force-Update/) option, so we could update <b>Security Groups</b> as needed
+Same story for a <b>Security Groups</b>, we reference our <b>Resource Group</b> by providing only its name, however notice that we include a [force_update](/How-to-use-Idem/States/Present-Update/Force-Update/) option, so we could update <b>Security Groups</b> as needed
 
 # Security Groups
 ```yaml

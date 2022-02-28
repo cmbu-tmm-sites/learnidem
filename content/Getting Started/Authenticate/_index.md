@@ -112,5 +112,5 @@ The following command will instruct [Idem](/Getting-Started/Install-Idem/) to us
 idem describe azure.compute.virtual_machines --acct-profile tmm
 ```
 
-[Describe](/Use-Cases/Describe/) Azure VM Machines within the "tmm" profile example:
+[Describe](/How-to-use-Idem/Describe/) Azure VM Machines within the "tmm" profile example:
 <script id="asciicast-SiXcq1OmVkca57LNf2m6N4wWK" src="https://asciinema.org/a/SiXcq1OmVkca57LNf2m6N4wWK.js" async theme="asciinema" data-autoplay="true" data-size="small" loop="true"></script>
