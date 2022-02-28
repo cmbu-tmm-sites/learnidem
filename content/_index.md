@@ -38,6 +38,6 @@ Take the data in your cloud description and use idem to enforce it. Sending the 
 With Idem, the term “Cloud” does not just mean cloud providers like AWS, Azure, and GCP, it means all things SaaS. Idem can describe and enforce sites like GitLab.com. Anything and everything that has an API is fair game for Idem.
 
 ### This is Just the Beginning
-Idem is an open source, Apache Licensed project from the minds of [VMware](https://www.vmware.com/) ’s top engineers. The goals of Idem are significant. We are seeking to create a universal cloud automation engine that can be leveraged to drive new ways to automate far more than just cloud infrastructure. We have come together with next generation concepts to allow us to keep up with cloud and API changes faster than anything developed in the past. By taking the burden of
+Idem is an open source, Apache Licensed project from the minds of [VMware](https://www.vmware.com/) ’s top engineers. The goals of Idem are significant. We are seeking to create a universal cloud automation engine that can be leveraged to drive new ways to automate far more than just cloud infrastructure. We have come together with next generation concepts to allow us to keep up with cloud and API changes faster than anything developed in the past.
 
 {{< button icon="fas fa-angle-double-right" url="Getting-Started" >}}Get Started{{< /button >}}
