@@ -6,17 +6,17 @@ weight: 50
 Transform configuration into [idempotent](/) action.<br>
 Discover Developer resources and collaborate with the community.
 
-{{< button icon="fas fa-angle-double-right" url="https://melissahurdart.wixsite.com/idemproject">}}Idem Project{{< /button >}}
+{{< button icon="fas fa-angle-double-right" url="https://www.idemproject.io">}}Idem Project{{< /button >}}
 <br>
-{{< button icon="fas fa-angle-double-right" url="https://melissahurdart.wixsite.com/idemproject/documentation" >}}More Documentation{{< /button >}}
+{{< button icon="fas fa-angle-double-right" url="https://www.idemproject.io/documentation" >}}More Documentation{{< /button >}}
 <br>
-{{< button icon="fas fa-angle-double-right" url="https://melissahurdart.wixsite.com/idemproject/community" >}}Community{{< /button >}}
+{{< button icon="fas fa-angle-double-right" url="https://www.idemproject.io/community" >}}Community{{< /button >}}
 <br>
-{{< button icon="fas fa-angle-double-right" url="https://melissahurdart.wixsite.com/idemproject/media" >}}Media{{< /button >}}
+{{< button icon="fas fa-angle-double-right" url="https://www.idemproject.io/media" >}}Media{{< /button >}}
 <br>
-{{< button icon="fas fa-angle-double-right" url="https://melissahurdart.wixsite.com/idemproject/podcast" >}}The Hacks{{< /button >}}
+{{< button icon="fas fa-angle-double-right" url="https://www.idemproject.io/podcast" >}}The Hacks{{< /button >}}
 <br>
-{{< button icon="fas fa-angle-double-right" url="https://melissahurdart.wixsite.com/idemproject/general-8" >}}Download{{< /button >}}
+{{< button icon="fas fa-angle-double-right" url="https://www.idemproject.io/general-8" >}}Download{{< /button >}}
 <br>
 {{< button icon="fas fa-angle-double-right" url="https://jmespath.org/tutorial.html" >}}JMESPath Tutorial{{< /button >}}
 <br>
