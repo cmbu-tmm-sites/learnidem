@@ -20,13 +20,13 @@ a:visited { color: #1c388e }
 
 .header {
     height: 80px;
+    
     padding: 5px;
 }
 
 .header-image {
     float: left;
-    width: 80px;
-    height: 80px;
+    padding-right: 10px;
 }
 .header-h1 {
     vertical-align: middle;
