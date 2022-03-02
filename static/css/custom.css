@@ -1,6 +1,6 @@
 /* default link color */
-a { color: #60b515; }
-a:visited { color: #1c388e }
+a { color: #68B83B; }
+a:visited { color: #2892C2 }
 
 /* hint */
 .gdoc-hint.info { background: #d1d7e8; border-color: #324b99; color: black; }
@@ -20,7 +20,7 @@ a:visited { color: #1c388e }
 
 .header {
     height: 80px;
-    
+
     padding: 5px;
 }
 
