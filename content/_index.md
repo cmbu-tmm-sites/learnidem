@@ -1,6 +1,6 @@
 # Liberating You From The Cloud
 
-The [Getting Started](Getting-Started/) section provides some basic tutorials to help you on your way to learning Idem.
+The [Getting Started](/Getting-Started/) section provides some basic tutorials to help you on your way to learning Idem.
 
 The Developer section provides developer resources, and overview of how to extend Idem, and links to information on how to understand the underlying POP architecture.
 
