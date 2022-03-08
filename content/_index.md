@@ -2,6 +2,7 @@
 
 The [Getting Started](/Getting-Started/) section provides some basic tutorials to help you on your way to learning Idem.
 
+
 The Developer section provides developer resources, and overview of how to extend Idem, and links to information on how to understand the underlying POP architecture.
 
 Learn Idem is written primarily by the Technical Marketing team for [vRealize Automation](https://www.vmware.com/products/vrealize-automation.html), but we’d love for you to contribute! There’s an [Edit on GitHub](https://github.com/cmbu-tmm-sites/learnidem/edit/main/content/_index.md) link on each page that will take you to the source code for that content - feel free to fork the repository and write your own - we look forward to your Pull Requests!
