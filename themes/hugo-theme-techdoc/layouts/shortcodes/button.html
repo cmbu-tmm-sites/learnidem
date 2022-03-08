@@ -3,9 +3,5 @@
     {{ with .Get "url" }}{{ if strings.HasPrefix . "http" }}target="_blank"{{ end }}{{ end }}>
     {{ with .Get "icon" }}<i class="{{ . }}"></i>&nbsp;{{ end }}
     {{ .Inner }}
-    {{ with .Get "url" }}
-        {{ if strings.HasPrefix . "http" }}
-            &nbsp;<i class="fa fa-external-link-alt fa-sm" aria-hidden="true"></i>
-        {{ end }}
-    {{ end }}
+    {{ with .Get "url" }}{{ if strings.HasPrefix . "http" }}&nbsp;<i class="fa fa-external-link-alt fa-sm" aria-hidden="true"></i>{{ end }}{{ end }}
 </a>

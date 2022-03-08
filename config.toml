@@ -5,14 +5,14 @@ theme = "hugo-theme-techdoc"
 # Required to get well formatted code blocks
 pygmentsUseClasses = true
 pygmentsCodeFences = true
-disablePathToLower = true
+disablePathToLower = false
 enableGitInfo = true
 
 [params]
-    logo = "/images/1254756-oss-id-idem-project_stacked.jpg"
+    logo = "/images/1254756-oss-id-idem-project.png"
 
     # Source Code repository section
-    description = "   Powered by Idem Project"
+    description = "Powered by Idem Project"
     # github_repository = "https://github.com/cmbu-tmm-sites/learnservicebroker"
 
     # Documentation repository section
@@ -30,12 +30,12 @@ enableGitInfo = true
     # See https://gohugo.io/templates/internal/#open-graph
     # See https://gohugo.io/templates/internal/#twitter-cards
     title = "Learn Idem"
-    images = ["/images/service-broker.svg"] # Open graph images are placed in `static/images`
+    images = ["/images/1254756-oss-id-idem-project.png"] # Open graph images are placed in `static/images`
 
     # Theme settings section
     # Theme color
     # See color value reference https://developer.mozilla.org/en-US/docs/Web/CSS/color
-    custom_font_color = "#0065ab"
+    custom_font_color = "#238FCF"
     custom_background_color = "#FFFFFF"
 
     # Documentation Menu section
