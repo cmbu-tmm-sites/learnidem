@@ -37,6 +37,7 @@ vpc-resources-to-import:
                               My Demo vpc.${aws.ec2.vpc:my_idem_vpc:resource_id}
                      {% endraw %}'
 ```
+
 The <b>State SLS</b> file can be executed with:
 
 ```shell
