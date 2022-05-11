@@ -11,7 +11,7 @@ Idem provides the [idem cli](/Getting-Started/Install-Idem/) which allows to des
 {{< tab "CLI Commands" >}}
 
 <b>encrypt</b><br>
-     Use the acct subsystem to encrypt data, e.g. [Encrypt the credentials file](/Getting-Started/Authenticate/)
+     Use the acct subsystem to encrypt data, e.g. [Encrypt the credentials file](/getting-started/authenticate/)
 
 ```shell
 idem encrypt /path/to/credentials.yaml
@@ -25,14 +25,14 @@ idem decrypt /path/to/credentials_test.yaml.fernet
 ```
 
 <b>describe</b><br>
-    Commands to run description routines, e.g. [Listing and obtaining existing VMs details](/How-to-use-Idem/Describe/)
+    Commands to run description routines, e.g. [Listing and obtaining existing VMs details](/how-to-use-idem/describe/)
 
 ```shell
 idem describe azure.compute.virtual_machines
 ```
 
 <b>state</b><br>
-    Commands to run idempotent states, e.g. [create, update, and in general manage your resources](/How-to-use-Idem/States/) 
+    Commands to run idempotent states, e.g. [create, update, and in general manage your resources](/how-to-use-idem/states/) 
 
 ```shell
 idem state vm_moff_present.sls
@@ -65,7 +65,7 @@ azure.virtual_networks.virtual_networks.absent:
 ```
 
 
-You can learn and learn more about each state at the <b>[use cases](/How-to-use-Idem/Use-Cases/)</b>
+You can learn and learn more about each state at the <b>[use cases](/how-to-use-idem/use-cases/)</b>
 
 
 {{< /tab >}}
