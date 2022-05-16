@@ -43,7 +43,7 @@ Encrypt the credentials file using the idem encrypt command, this creates a fern
 ```shell
 idem encrypt /path/to/credentials.yaml
 ```
-Please note that the output string from the command above is the key Idem uses for accessing the encrypted credentials fernet file
+Please note that the output string from the command above is the key Idem uses for accessing the encrypted credentials fernet file, and that if you update your credentials file, Idem will re-use the existing <b>ACCT_KEY</b> previously generated and defined in your OS.
 
 ```shell
 <output encryption key>
