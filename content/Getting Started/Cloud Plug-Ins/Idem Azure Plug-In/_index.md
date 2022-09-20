@@ -1,42 +1,13 @@
 ---
 title: "Idem Azure Plug-In"
-weight: 10
+weight: 20
 ---
 
-<b>Supported Resources</b> provides a list of Azure Resources supported by the latest Idem Azure Plug-Ins<br>
-<b>Install the Plug-Ins</b> section provides instructions for installing the Idem Azure Plug-Ins
+The various states available for use in the Idem-Azure plugin are documented briefly on the [Idem Azure Plug-In States](states) page.<br />
 
-{{< tabs "Operations" >}}
-{{< tab "Supported Resources" >}}
-
-<SPAN STYLE="font-size:18.0pt">Current Supported Resources states in "idem-azure-auto"</SPAN>
- <ul>
- <li><p><b>authorization:</b></p>
-     role_assignment</br>
-     role_definition</li>
-<li><p><b>compute:</b></p>
-    virtual_machines</li>
-<li><p><b>resource_management:</b></p>
-    resource_groups</li>
-<li><p><b>storage_resource_provider:</b></p>
-    storage_accounts</li>    
-<li><p><b>policy:</b></p>
-    policy_assignments</li>    
-<li><p><b>virtual_networks:</b></p>
-    nat_gateways<br>
-    network_interfaces<br>
-    network_security_groups<br>
-    public_ip_addresses<br>
-    route_tables<br>
-    routes<br>
-    security_rules<br>
-    subnets<br>
-    virtual_networks<br></li>
- </ul>
-
-{{< /tab >}}
-{{< tab "Install the Plug-Ins" >}}
-For Installing the latest "idem-azure-auto" Cloud Plug-Ins
+{{< tabs "Installing" >}}
+{{< tab "Installing the Idem Azure Plug-In" >}}
+To install the latest "idem-azure" Plug-In
 
 ```shell
 pip install idem-azure-auto
@@ -81,5 +52,5 @@ You can also learn how to launch it and gain access to the Dockerfile at [VMware
 {{< /tab >}}
 {{< /tabs >}}
 
-After Installing the Plug-Ins you can now set up the credentials needed for the Plug-Ins to [authenticate](/Getting-Started/Authenticate/)<br>
-Then you could follow a few [use case examples ](/How-to-use-Idem/Use-Cases//)
+After Installing the Plug-In you can now set up the credentials needed for the Plug-In to [authenticate](/Getting-Started/Authenticate/) to Azure.<br />
+Then you could follow a few [use case examples](/How-to-use-Idem/Use-Cases/).

@@ -3,45 +3,11 @@ title: "Idem AWS Plug-In"
 weight: 20
 ---
 
-<b>Supported Resources</b> provides a list of AWS Resources supported by the latest Idem AWS Plug-Ins<br>
-<b>Install the Plug-Ins</b> section provides instructions for installing the Idem AWS Plug-Ins
+The various states available for use in the Idem-AWS plugin are documented briefly on the [Idem AWS Plug-In States](states) page.<br />
 
-{{< tabs "Operations" >}}
-{{< tab "Supported Resources" >}}
-
-<SPAN STYLE="font-size:18.0pt">Current Supported Resources states in "idem-aws"</SPAN>
- <ul>
- <li><p><b>ec2:</b></p>
-     elastic_ip</br>
-     flow_log<br>
-     instance<br>
-     internet_gateway<br>
-     nat_gateway<br>
-     route_table<br>
-     spot_instance<br>
-     subnet<br>
-     transit_gateway<br>
-     transit_gateway_vpc_attachment<br>
-     vpc</li>
-<li><p><b>iam:</b></p>
-    instance_profile<br>
-    policy<br>
-    role<br>
-    role_policy<br>
-    role_policy_attachment<br>
-    user</li>
-<li><p><b>kms:</b></p>
-    key</li>
-<li><p><b>organizations:</b></p>
-    organization<br>
-    organization_unit</li>
-<li><p><b>s3:</b></p>
-    bucket</li>
- </ul>
-
-{{< /tab >}}
-{{< tab "Install the Plug-Ins" >}}
-For Installing the latest "idem-AWS" Cloud Plug-Ins
+{{< tabs "Installing" >}}
+{{< tab "Installing the Idem AWS Plug-In" >}}
+To install the latest "idem-AWS" Plug-In
 
 ```shell
 pip install idem-aws
@@ -65,7 +31,6 @@ And obtain more details, including version and required dependencies
 ```shell
 pip show idem-aws
 ```
-
 {{< /tab >}}
 
 {{< tab "Container Bundle" >}}
@@ -79,8 +44,8 @@ docker pull ghcr.io/vmwarecmbutmm/idem-container:aws-latest
 
 You can also learn how to launch it and gain access to the Dockerfile at [VMwareCMBUTMM/idem-container-aws](https://github.com/VMwareCMBUTMM/idem-container/tree/main/idem-aws)
 
-
+{{< /tab >}}
 {{< /tabs >}}
 
-After Installing the Plug-Ins you can now set up the credentials needed for the Plug-Ins to [authenticate](/Getting-Started/Authenticate/)<br>
-Then you could follow a few [use case examples ](/How-to-use-Idem/Use-Cases/)
+After Installing the Plug-In you can now set up the credentials needed for the Plug-In to [authenticate](/Getting-Started/Authenticate/) to AWS.<br />
+Then you could follow a few [use case examples](/How-to-use-Idem/Use-Cases/).
